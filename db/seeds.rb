@@ -3,6 +3,7 @@ puts "Destroying everything"
 KebabShop.destroy_all
 
 puts "Creating Kebab Shop 1"
+
 kebab_shop = KebabShop.new(name: 'Shawarma Huset', price: 8, address: 'Godthabsvej 5, 2000, Fredriksberg')
 kebab_shop.save!
 
