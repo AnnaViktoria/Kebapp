@@ -1,0 +1,2 @@
+class KebabShopsController < ApplicationController
+end
