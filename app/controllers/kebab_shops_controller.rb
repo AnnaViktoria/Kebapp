@@ -32,4 +32,8 @@ class KebabShopsController < ApplicationController
   def destroy
     @kebab_shop.destroy
   end
+
+  def review_params
+    params.require(:kebab_shop).permit(:name, :address, :price, :start_time, :closing_time)
+  end
 end
