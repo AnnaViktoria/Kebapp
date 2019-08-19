@@ -4,7 +4,6 @@ class KebabShopsController < ApplicationController
   end
 
   def show
-    @kebab_shop = KebabShop.new
     @review = Review.new
   end
 
@@ -34,6 +33,6 @@ class KebabShopsController < ApplicationController
   end
 
   def review_params
-    params.require(:kebab_shop).permit(:name, :address, :price, :start_time, :closing_time)
+    params.require(:kebab_shop).permit(:name, :address)
   end
 end
