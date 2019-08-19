@@ -32,5 +32,16 @@ ActiveRecord::Schema.define(version: 2019_08_19_125834) do
     t.index ["kebab_shop_id"], name: "index_reviews_on_kebab_shop_id"
   end
 
+  create_table "schedules", force: :cascade do |t|
+    t.string "weekday"
+    t.integer "opening_hour"
+    t.integer "closing_hour"
+    t.bigint "kebab_shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kebab_shop_id"], name: "index_schedules_on_kebab_shop_id"
+  end
+
   add_foreign_key "reviews", "kebab_shops"
+  add_foreign_key "schedules", "kebab_shops"
 end
