@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :kebab_shops do
     resources :reviews, only: [:new, :create]
+    resources :schedules, only: [:new, :create]
   end
 end

@@ -4,7 +4,10 @@ class KebabShopsController < ApplicationController
   end
 
   def show
+    @kebab_shop = KebabShop.find(params[:id])
+    @week_day = ["Monday", "Tuesday", "Wednesday", "Thuresday", "Saturday", "Sunday"]
     @review = Review.new
+    @schedule = Schedule.new
   end
 
   def new
