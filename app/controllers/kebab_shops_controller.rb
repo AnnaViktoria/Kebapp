@@ -25,11 +25,15 @@ class KebabShopsController < ApplicationController
   end
 
   def update
-    @dragon.update(kebab_shop_params)
+    @kebab_shop.update(kebab_shop_params)
     redirect_to kebab_shops_path(@kebab_shop)
   end
 
   def destroy
     @kebab_shop.destroy
+  end
+
+  def review_params
+    params.require(:kebab_shop).permit(:name, :address, :price, :start_time, :closing_time)
   end
 end
