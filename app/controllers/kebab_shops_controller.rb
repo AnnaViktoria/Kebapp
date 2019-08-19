@@ -25,7 +25,7 @@ class KebabShopsController < ApplicationController
   end
 
   def update
-    @dragon.update(kebab_shop_params)
+    @kebab_shop.update(kebab_shop_params)
     redirect_to kebab_shops_path(@kebab_shop)
   end
 
