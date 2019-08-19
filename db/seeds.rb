@@ -1,44 +1,52 @@
 puts "Destroying everything"
 
 KebabShop.destroy_all
+Review.destroy_all
+Schedule.destroy_all
 
 puts "Creating Kebab Shop 1"
-
-kebab_shop = KebabShop.new(name: 'Shawarma Huset', price: 8, address: 'Godthabsvej 5, 2000, Fredriksberg')
+kebab_shop = KebabShop.new(name: 'Shawarma Huset', address: 'Godthabsvej 5, 2000, Fredriksberg')
 kebab_shop.save!
 
-# puts "Creating Creating Kebab Shop 2"
-# kebab_shop = KebabShop.new(name: 'Den Gronne Shawarma', price: 10, address: 'Falkoner Alle 26A, 2000, Fredriksberg',  closing_time: '22:00:00' , start_time: '10:00:00' )
-# kebab_shop.save!
+Review.new(kebab_shop_id: kebab_shop.id, content:"content test", rating: 5).save!
 
-# puts "Creating Creating Kebab Shop 3"
-# kebab_shop = KebabShop.new(name: 'Safir Kebab', price: 89, address: 'Jagtvej 23, 2200, København',  closing_time: '23:00:00' , start_time: '11:00:00' )
-# kebab_shop.save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 100000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 100000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 100000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 100000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 100000,  closing_hour: 50000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 100000,  closing_hour: 50000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 100000,  closing_hour: 30000 ).save!
+puts "Kebab Shop 1 created!"
 
-# puts "Creating Creating Kebab Shop 4"
-# kebab_shop = KebabShop.new(name: 'Torvets Kebab', price: 2, address: 'Sankt Hans Torv 24, 2200, København',  closing_time: '00:00:00', start_time: '11:00:00')
-# kebab_shop.save!
+puts "Creating Kebab Shop 2"
+kebab_shop = KebabShop.new(name: 'Kebab King', address: 'Mindstrasse 11, 2023, Kurlssberg')
+kebab_shop.save!
 
-# puts "Creating Creating Kebab Shop 5"
-# kebab_shop = KebabShop.new(name: 'Kebabistan', price: 15, address: 'Istegade 105, 1650, København',  closing_time: '01:00:00', start_time: '11:00:00' )
-# kebab_shop.save!
+puts "creating review kebab 2"
+Review.new(kebab_shop_id: kebab_shop.id, content:"content test", rating: 3).save!
 
-# puts "Creating Creating Kebab Shop 6"
-# kebab_shop = KebabShop.new(name: 'The Kebab', price: 29, address: 'Roskildevej 65, 2000 Fredriksberg',  closing_time: '21:00:00', start_time: '11:00:00')
-# kebab_shop.save!
+puts "Creating schedule kebab Shop 2"
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 90000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 90000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 90000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 90000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 120000,  closing_hour: 50000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 120000,  closing_hour: 20000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 120000,  closing_hour: 20000 ).save!
+puts "Kebab Shop 2 created!"
 
-# puts "Creating Creating Kebab Shop 7"
-# kebab_shop = KebabShop.new(name: 'Konak Kebab', price: 68, address: 'Norrebrogade 205, 2200, København',  closing_time: '23:00:00' , start_time: '12:00:00')
-# kebab_shop.save!
+puts "Creating Kebab Shop 3"
+kebab_shop = KebabShop.new(name: 'Farafelle world', address: 'Norgate 18, 2011, Nemo')
+kebab_shop.save!
 
-# puts "Creating Creating Kebab Shop 8"
-# kebab_shop = KebabShop.new(name: 'Kebab Town', price: 49, address: 'Falkoner Alle 44, 2000, København',  closing_time: '00:00:00', start_time: '11:00:00' )
-# kebab_shop.save!
+Review.new(kebab_shop_id: kebab_shop.id, content:"content test", rating: 1).save!
 
-# puts "Creating Creating Kebab Shop 9"
-# kebab_shop = KebabShop.new(name: 'Kebab House', price: 29, address: 'Gl Konglevej 102, 1850, Fredriksberg',  closing_time: '22:00:00' , start_time: '11:00:00' )
-# kebab_shop.save!
-
-# puts "Creating Creating Kebab Shop 10"
-# kebab_shop = KebabShop.new(name: 'Durum Bar', price: 39, address: 'Norrebrogade 195, 2200, København',  closing_time: '00:00:00', start_time: '11:00:00' )
-# kebab_shop.save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 120000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 120000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 80000,  closing_hour: 240000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 120000,  closing_hour: 30000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 80000,  closing_hour: 50000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 110000,  closing_hour: 220000 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 110000,  closing_hour: 30000 ).save!
+puts "Kebab Shop 3 created!"
