@@ -38,3 +38,4 @@ var SignupButtons = {
 };
 
 window.onload = SignupButtons.init;
+
