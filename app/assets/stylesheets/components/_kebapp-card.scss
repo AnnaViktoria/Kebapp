@@ -1,5 +1,5 @@
 .kebapp-card-top {
-  height: 300px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -13,7 +13,7 @@
   box-shadow: 0 0 30px rgba (0,0,0,0,5);
   border: 0,5px solid;
   background-color: white;
-  height: 400px;
+  height: 300px;
   margin: 10px 10px;
 }
 
@@ -22,25 +22,17 @@
    font-size: 50px;
 }
 
-.kebapp-card img {
-  height: 350px;
-}
-
 .kebapp-card .kebapp-card-text {
   padding: 16px;
   color: black;
   position: relative;
+  font-family: 'Homenaje', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .kebapp-card-price {
   position: absolute;
   right: 10px;
+  color: #f34573;
 }
-
-
-
-
-
-
-
-
