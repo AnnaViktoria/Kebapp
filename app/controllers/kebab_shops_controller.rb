@@ -1,6 +1,14 @@
 class KebabShopsController < ApplicationController
   def index
     @kebab_shops = KebabShop.all
+
+    @markers = @kebab_shops.map do |kebab|
+      {
+        lat: kebab.latitude,
+        lng: kebab.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { kebab: kebab })
+      }
+    end
   end
 
   def show
