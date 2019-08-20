@@ -1,1 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <% @kebab_shops.each do |kebab| %>
+      <h1><strong><%= kebab.name %></strong></h1>
+      <h2>Adress: <%= kebab.address %></h2>
+      <% end  %>
+    </div> <!-- end of col -->
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
 
+
+
+
+
+
+<% @kebab_shops.each do |kebab| %>
+ <%= link_to "#{kebab.name}", kebab_shop_path(kebab), class: "btn btn-primary" %>
+<% end %>

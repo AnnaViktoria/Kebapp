@@ -4,8 +4,10 @@ class KebabShopsController < ApplicationController
   end
 
   def show
-    @kebab_shop = KebabShop.new
+    @kebab_shop = KebabShop.find(params[:id])
+    @week_day = ["Monday", "Tuesday", "Wednesday", "Thuresday", "Saturday", "Sunday"]
     @review = Review.new
+    @schedule = Schedule.new
   end
 
   def new
@@ -34,6 +36,6 @@ class KebabShopsController < ApplicationController
   end
 
   def review_params
-    params.require(:kebab_shop).permit(:name, :address, :price, :start_time, :closing_time)
+    params.require(:kebab_shop).permit(:name, :address)
   end
 end
