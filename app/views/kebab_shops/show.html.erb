@@ -1,5 +1,5 @@
 <h1><%= @kebab_shop.name %></h1>
 <h1> <%= @kebab_shop.schedules[0].closing_hour / 10000 %> </h1>
-
+<%= cl_image_tag @kebab_shop.photo, height: 300, width: 400, crop: :fill %>
 
 <h1> today : <%= @week_day[Date.today.cwday - 1] %> </h1>

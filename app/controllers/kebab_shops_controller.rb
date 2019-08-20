@@ -36,6 +36,6 @@ class KebabShopsController < ApplicationController
   end
 
   def review_params
-    params.require(:kebab_shop).permit(:name, :address)
+    params.require(:kebab_shop).permit(:name, :address, :photo)
   end
 end
