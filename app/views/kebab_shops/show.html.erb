@@ -3,3 +3,5 @@
 <% @kebab_shop.schedules.each_with_index do |day, index| %>
 <h1> <%= @week_day[index] %> (<%= day.opening_hour %>:00 - <%= day.closing_hour %>:00)</h1>
 <% end %>
+
+<%= render "shared/review-form" %>

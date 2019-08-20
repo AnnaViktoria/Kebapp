@@ -1,13 +1,14 @@
 class ReviewsController < ApplicationController
   def create
-    @review = @review = Review.new(review_params)
+    @review = Review.new(review_params)
     @review.kebab_shop = KebabShop.find(params[:kebab_shop_id])
-    @review.valid?
-    # Associate review with dragon
-    # Associate review with user
-    # use current_user to access the currently logged user
-    @review.save
-    redirect_to kebab_shop_path(@review.kebab_shop)
+    if @review.save
+      redirect_to kebab_shop_path(@review.kebab_shop)
+    else
+      @review.errors.full_messages
+      debug
+      render :new
+    end
   end
 
   def destroy
@@ -34,6 +35,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:rating, :content, :user)
+    params.require(:review).permit(:user, :rating, :content)
   end
 end
