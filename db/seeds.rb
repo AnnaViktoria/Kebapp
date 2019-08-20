@@ -4,54 +4,6 @@ KebabShop.destroy_all
 Review.destroy_all
 Schedule.destroy_all
 
-puts "Creating Kebab Shop 1"
-kebab_shop = KebabShop.new(name: "Shawarma Huset", address: 'Godthabsvej 5, 2000, Fredriksberg')
-kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566306072/Screenshot_2019-08-20_at_15.00.55_pdz5zm.png"
-kebab_shop.save!
-
-Review.new(user: "Dracula", kebab_shop_id: kebab_shop.id, content:"content test", rating: 5).save!
-
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
-puts "Kebab Shop 1 created!"
-
-puts "Creating Kebab Shop 2"
-kebab_shop = KebabShop.new(name: "Kebab King", address: 'Mindstrasse 11, 2023, Kurlssberg')
-kebab_shop.remote_photo_url = "https://i.redd.it/5jlzxpm1yf901.jpg"
-kebab_shop.save!
-
-Review.new(user: "Trump", kebab_shop_id: kebab_shop.id, content:"content test", rating: 3).save!
-
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 9,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 9,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 9,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 9,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 12, closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12, closing_hour: 2 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12, closing_hour: 2 ).save!
-puts "Kebab Shop 2 created!"
-
-puts "Creating Kebab Shop 3"
-kebab_shop = KebabShop.new(name: "Farafelle world", address: 'Norgate 18, 2011, Nemo')
-kebab_shop.remote_photo_url = "https://i.redd.it/5jlzxpm1yf901.jpg"
-kebab_shop.save!
-
-Review.new(user: "Pence", kebab_shop_id: kebab_shop.id, content:"content test", rating: 1).save!
-
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 12, closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 12, closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 8,  closing_hour: 24 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 12, closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 8,  closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 22 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 3 ).save!
-puts "Kebab Shop 3 created!"
-
 puts "Creating Kebab Shop 4"
 kebab_shop = KebabShop.new(name: "Durum Bar", address: 'Nørregade 53, 1165, København')
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566290368/Screenshot_2019-08-20_at_10.39.02_gdb9q6.png"
