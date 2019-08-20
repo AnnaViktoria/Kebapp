@@ -3,3 +3,25 @@
 <% @kebab_shop.schedules.each_with_index do |day, index| %>
 <h1> <%= @week_day[index] %> (<%= day.opening_hour %>:00 - <%= day.closing_hour %>:00)</h1>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div id="map" style="width: 100%; height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
