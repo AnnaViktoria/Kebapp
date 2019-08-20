@@ -2,4 +2,23 @@
 <h1> <%= @kebab_shop.schedules[0].closing_hour / 10000 %> </h1>
 <%= cl_image_tag @kebab_shop.photo, height: 300, width: 400, crop: :fill %>
 
-<h1> today : <%= @week_day[Date.today.cwday - 1] %> </h1>
+<br>
+<% @kebab_shop.schedules.each_with_index do |day, index| %>
+<h1> <%= @week_day[index] %> (<%= day.opening_hour %>:00 - <%= day.closing_hour %>:00)</h1>
+<% end %>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div id="map" style="width: 100%; height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/review-form" %>
+<%=  render 'shared/footer' %>
+
