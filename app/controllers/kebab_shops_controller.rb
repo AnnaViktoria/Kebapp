@@ -2,13 +2,7 @@ class KebabShopsController < ApplicationController
   def index
     @kebab_shops = KebabShop.all
 
-    @markers = @kebab_shops.map do |kebab|
-      {
-        lat: kebab.latitude,
-        lng: kebab.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { kebab: kebab })
-      }
-    end
+    @markers = markers(@kebab_shops)
   end
 
   def show
@@ -25,6 +19,7 @@ class KebabShopsController < ApplicationController
 
     @review   = Review.new
     @schedule = Schedule.new
+    @markers = markers([@kebab_shop])
   end
 
   def new
@@ -50,6 +45,18 @@ class KebabShopsController < ApplicationController
 
   def destroy
     @kebab_shop.destroy
+  end
+
+  private
+
+  def markers(array)
+    array.map do |kebab|
+      {
+        lat: kebab.latitude,
+        lng: kebab.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { kebab: kebab })
+      }
+    end
   end
 
   def review_params
