@@ -12,9 +12,18 @@ class KebabShopsController < ApplicationController
   end
 
   def show
-    @kebab_shop = KebabShop.find(params[:id])
-    @week_day = ["Monday", "Tuesday", "Wednesday", "Thuresday", "Saturday", "Sunday"]
-    @review = Review.new
+    @kebab_shop    = KebabShop.find(params[:id])
+    #regex to find the street, street number, postal code and city
+    regex          = /([^\s[,]]+)/
+    address_array  = @kebab_shop.address.scan(regex).flatten
+    @street        = address_array[0]
+    @street_number = address_array[1]
+    @postal_code   = address_array[2]
+    @city          = address_array[3]
+
+    @week_day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+    @review   = Review.new
     @schedule = Schedule.new
   end
 

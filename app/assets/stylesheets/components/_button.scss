@@ -16,7 +16,6 @@
   text-decoration: none;
   transition: background-color 150ms, color 150ms ease-in-out;
   white-space: nowrap;
-  width: 100%;
 
   //
   // Text
@@ -185,18 +184,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-
-//
-// Demo
-// ----
-
-:root {
-  align-items: center;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
 }
