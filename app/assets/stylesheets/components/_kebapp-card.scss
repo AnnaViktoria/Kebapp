@@ -24,9 +24,11 @@ body {
   margin: 10px 10px;
 }
 
-.kebapp-store-name {
+.kebapp-store-name a {
    font-family: 'Bangers', cursive;
+   text-decoration: none;
    font-size: 50px;
+   color: white;
 }
 
 .kebapp-card .kebapp-card-text {
@@ -42,4 +44,15 @@ body {
   position: absolute;
   right: 10px;
   color: #f34573;
+}
+
+.kebapp-card-hours a {
+  color: black;
+  text-decoration: none;
+}
+
+.kebapp-card-rating {
+  position: absolute;
+  top: 17px;
+  right: 10px;
 }
