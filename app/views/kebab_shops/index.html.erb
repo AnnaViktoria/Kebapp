@@ -17,3 +17,16 @@
 <% @kebab_shops.each do |kebab| %>
  <%= link_to "#{kebab.name}", kebab_shop_path(kebab), class: "btn btn-primary" %>
 <% end %>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div id="map" style="width: 100%; height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
