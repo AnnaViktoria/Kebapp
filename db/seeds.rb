@@ -5,7 +5,7 @@ Review.destroy_all
 Schedule.destroy_all
 
 puts "Creating Kebab Shop 1"
-kebab_shop = KebabShop.new(name: 'Shawarma Huset', address: 'Godthabsvej 5, 2000, Fredriksberg')
+kebab_shop = KebabShop.new(name: 'Shawarma Huset', address: 'Godthåbsvej 5, 2000, Frederiksberg')
 kebab_shop.save!
 
 Review.new(kebab_shop_id: kebab_shop.id, content:"content test", rating: 5).save!
