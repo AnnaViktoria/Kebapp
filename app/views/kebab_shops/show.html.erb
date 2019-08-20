@@ -1,5 +1,27 @@
 <h1><%= @kebab_shop.name %></h1>
-<h1> <%= @kebab_shop.schedules[0].closing_hour / 10000 %> </h1>
+<br>
+<% @kebab_shop.schedules.each_with_index do |day, index| %>
+<h1> <%= @week_day[index] %> (<%= day.opening_hour %>:00 - <%= day.closing_hour %>:00)</h1>
+<% end %>
 
 
-<h1> today : <%= @week_day[Date.today.cwday - 1] %> </h1>
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div id="map" style="width: 100%; height: 600px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>

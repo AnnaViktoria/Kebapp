@@ -1,4 +1,37 @@
-<h1>Design Page</h1>
+<h1>Design</h1>
+
+<h2>Button Design</h2>
+
+<button class="frontpagebutton">
+  <span>
+    <svg>
+      <use xlink:href="#circle"/>
+    </svg>
+
+    <svg>
+      <use xlink:href="#check"/>
+    </svg>
+  </span>
+
+  <ul>
+    <li>Kebab me</li>
+    <li>Getting Kebabed</li>
+    <li>Kebabed</li>
+  </ul>
+</button>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="circle">
+    <circle cx="8" cy="8" r="7.5"></circle>
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="check">
+    <path d="m.65909042 4.04356308 2.43156433 2.43156433 5.83150483-5.83150482" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+  </symbol>
+</svg>
+
+<%= javascript_pack_tag 'frontpagebutton' %>
+
 
 <h2>This is cards</h2>
 
