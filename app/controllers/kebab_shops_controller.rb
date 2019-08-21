@@ -7,14 +7,10 @@ class KebabShopsController < ApplicationController
   end
 
   def show
-    @kebab_shop    = KebabShop.find(params[:id])
-    #regex to find the street, street number, postal code and city
-    regex          = /([^\s[,]]+)/
-    address_array  = @kebab_shop.address.scan(regex).flatten
-    @street        = address_array[0]
-    @street_number = address_array[1]
-    @postal_code   = address_array[2]
-    @city          = address_array[3]
+    @kebab_shop = KebabShop.find(params[:id])
+
+    split_address
+    average_rating
 
     @week_day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -71,5 +67,36 @@ class KebabShopsController < ApplicationController
 
   def review_params
     params.require(:kebab_shop).permit(:name, :address, :photo)
+  end
+
+  def split_address
+    regex          = /([^\s[,]]+)/
+    address_array  = @kebab_shop.address.scan(regex).flatten
+    street_address = false
+    city_address   = false
+    @street        = ""
+
+    address_array.each do |word|
+      if word =~ /\d/ && !street_address && !city_address
+        @street_number = word
+        street_address = true
+      elsif word =~ /\d/ && street_address && !city_address
+        @postal_code = word
+        city_address = true
+      elsif street_address && city_address
+        @city = word
+      else
+        @street += word
+        @street += " "
+      end
+    end
+  end
+
+  def average_rating
+    counter = 0
+    @kebab_shop.reviews.each do |review|
+      counter += review.rating
+    end
+    @average_rating = counter.to_f / @kebab_shop.reviews.size
   end
 end
