@@ -1,4 +1,6 @@
+require 'pry-byebug'
 class KebabShopsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:set_user_location]
   def index
     @kebab_shops = KebabShop.all
 
@@ -46,6 +48,15 @@ class KebabShopsController < ApplicationController
   def destroy
     @kebab_shop.destroy
   end
+
+  def set_user_location
+    cookies[:user_lat] = params[:latitude]
+    cookies[:user_lng] = params[:longitude]
+    location = Geocoder.search([cookies[:user_lat], cookies[:user_lng]])
+    cookies[:neighborhood] = location.first.data['address']['suburb']
+    cookies[:city] = location.first.data['address']['city']
+  end
+
 
   private
 
