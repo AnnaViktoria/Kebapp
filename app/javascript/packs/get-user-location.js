@@ -29,7 +29,6 @@ const setUserLocation = (event) => {
   //   latitude: window.userLatitude,
   //   longitude: window.userLongitude
   // }
-  console.log(coords);
 };
 
 setUserLocation();
