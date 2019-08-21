@@ -3,6 +3,7 @@
     <%= simple_form_for [@kebab_shop, @review] do |f| %>
       <%= f.label :user, 'Your name' %>
       <%= f.input :user, label: false %>
+
       <fieldset class="rating">
         <%= f.radio_button(:rating, "5") %> <%= f.label(:rating.to_s + "_5") %>
         <%= f.radio_button(:rating, "4") %> <%= f.label(:rating.to_s + "_4") %>
@@ -10,6 +11,7 @@
         <%= f.radio_button(:rating, "2") %> <%= f.label(:rating.to_s + "_2") %>
         <%= f.radio_button(:rating, "1") %> <%= f.label(:rating.to_s + "_1") %>
       </fieldset>
+
       <%= f.label :content, 'Your message' %>
       <%= f.input :content, label: false %>
       <%= f.submit class: "btn btn-primary"%>
