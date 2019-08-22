@@ -1,10 +1,11 @@
 class KebabShopsController < ApplicationController
+
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
+
   def index
     @kebab_shops = KebabShop.all
-    cookies[:anna] = 'anna'
-
     @markers = markers(@kebab_shops)
+    @kebab_search = KebabShop.search_by_name(params[:name])
   end
 
   def show
@@ -13,10 +14,11 @@ class KebabShopsController < ApplicationController
     split_address
     average_rating
 
-    @week_day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
     @review   = Review.new
     @schedule = Schedule.new
+    day_today = Date.today.strftime("%A").downcase!
+    @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
+
     @markers = markers([@kebab_shop])
   end
 
@@ -67,7 +69,7 @@ class KebabShopsController < ApplicationController
   end
 
   def review_params
-    params.require(:kebab_shop).permit(:name, :address, :photo)
+    params.require(:kebab_shop).permit(:name)
   end
 
   def split_address

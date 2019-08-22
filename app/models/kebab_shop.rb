@@ -1,4 +1,5 @@
 class KebabShop < ApplicationRecord
+  include PgSearch
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
@@ -7,6 +8,11 @@ class KebabShop < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true, uniqueness: true
+
+  pg_search_scope :search_by_name, against: [:name],
+    using: {
+      tsearch: { prefix: true }
+    }
 
   def coordinates
     [latitude, longitude]

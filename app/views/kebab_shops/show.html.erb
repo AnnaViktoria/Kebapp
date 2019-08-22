@@ -1,13 +1,13 @@
 <%= render 'shared/navbar' %>
 
+
+
 <h1><%= @kebab_shop.name %></h1>
-<h1> <%= @kebab_shop.schedules[0].closing_hour / 10000 %> </h1>
+
+<h1>Closing time = <%= @week_day.closing_hour %>:00 </h1>
+
 <%= cl_image_tag @kebab_shop.photo, height: 300, width: 400, crop: :fill %>
 
-<br>
-<% @kebab_shop.schedules.each_with_index do |day, index| %>
-<h1> <%= @week_day[index] %> (<%= day.opening_hour %>:00 - <%= day.closing_hour %>:00)</h1>
-<% end %>
 
 <h3> full address  : <%= @kebab_shop.address  %> </h3>
 <h3> address       : <%= @street %> </h3>
