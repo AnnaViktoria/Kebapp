@@ -3,11 +3,9 @@
 //   console.log(userLocationDiv);
 //   userLocationDiv.innerHTML = `${position.coords.latitude}, ${position.coords.longitude}`;
 // });
-console.log("JS is happening")
 
 const setUserLocation = (event) => {
   navigator.geolocation.getCurrentPosition(function(position) {
-    debugger;
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const requestBody = {
