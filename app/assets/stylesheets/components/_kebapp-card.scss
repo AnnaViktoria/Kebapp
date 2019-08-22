@@ -1,11 +1,11 @@
 
 .kebapp-card{
-  height: 300px;
-  border-radius: 6px;
+  height: 180px;
+  border-radius: 4px;
   padding: 5px 5px;
   border: 0,5px solid;
   background-color: white;
-  margin: 10px 0px;
+  margin: 5px 0px;
   .kebabcard-content {
     position: relative;
     width: 100%;
@@ -25,7 +25,7 @@
 .kebapp-store-name {
    font-family: 'Bangers', cursive;
    text-decoration: none;
-   font-size: 50px;
+   font-size: 45px;
    color: white;
 }
 
@@ -87,42 +87,46 @@
     font-family: 'Homenaje', sans-serif;
     font-weight: bold;
     width: 100%;
+    p {
+      margin-bottom: 6px;
+    }
   }
 
   .kebapp-name-of-store {
-    margin-top: 20px;
+    margin-top: 70px;
     font-family: 'Bangers', cursive;
-    font-size: 35px;
+    font-size: 30px;
     color: white;
   }
 
   .kebapp-card-hours {
-    font-size: 30px;
+    font-size: 13px;
   }
 
   .kebapp-card-distance {
-    font-size: 25px;
+    font-size: 12px;
   }
 }
 
 .flip-button {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 300;
   cursor: pointer;
-  padding: 0 1.5em;
-  height: 3em;
-  line-height: 2.9em;
-  min-width: 3em;
+  padding: 0 1.0em;
+  height: 5em;
+  line-height: 1.7em;
+  min-width: 1em;
   background-color: transparent;
   color: #fff;
   backface-visibility: hidden;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 
   &.flip-return {
-    line-height: 3em;
+    line-height: 0em;
     color: #355cc9;
-    border-color: #355cc9;
     text-shadow: none;
   }
 }
+
+
