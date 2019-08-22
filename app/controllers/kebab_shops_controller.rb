@@ -10,10 +10,6 @@ class KebabShopsController < ApplicationController
     else
       @kebab_shops = KebabShop.all
     end
-    @kebab_shops = KebabShop.all
-    
-     cookies[:anna] = 'anna'
-
 
     @markers = markers(@kebab_shops)
   end
