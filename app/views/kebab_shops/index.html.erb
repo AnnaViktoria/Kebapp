@@ -1,5 +1,9 @@
 <%= render 'shared/navbar' %>
 
+<%#= link_to "Sort by price", kebabs_path(filter: :price) %>
+<%= link_to "Sort by distance", kebab_shops_path(filter: :distance) %>
+<%= link_to "Sort by rating", kebab_shops_path(filter: :rating) %>
+
 <h1 class=text-center>Kebab Shops</h1>
 
 <div class="container">
@@ -9,19 +13,15 @@
           <%= render 'shared/kebab-card', kebab: kebab %>
         </div> <!-- end of col -->
       <% end%>
-  </div> <!-- end of row -->
-</div> <!-- end of container -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-6">
-      <div id="map" style="width: 100%; height: 600px;"
+      <div id="map" style="width: 390px; height: 390px;"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-    </div>
-  </div>
-</div>
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
+
+
 <%=  render 'shared/footer' %>
 
 <%= javascript_pack_tag "get-user-location" %>
