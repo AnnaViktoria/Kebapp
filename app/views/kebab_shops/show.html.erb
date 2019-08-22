@@ -9,13 +9,9 @@
             </div>
       <h3 class="kebab-font mt-3 text-center"><%= @kebab_shop.name %></h3>
       <h4 class="text-center">Closes at: <%= @week_day.closing_hour %>:00 </h4>
-      <div class="text-center">
-      <%= cl_image_tag @kebab_shop.photo, height: 150, width: 250, crop: :fill %>
-      <br>
+      <div class="height-width" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @kebab_shop.photo, crop: :fill %>)">
       </div>
-      <br>
       <p class="text-center"><strong> <%= @kebab_shop.address  %> </strong></p>
-
 
       <ul>
         <% @kebab_shop.reviews.each do |review| %>
