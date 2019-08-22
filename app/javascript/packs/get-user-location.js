@@ -4,7 +4,6 @@
 //   userLocationDiv.innerHTML = `${position.coords.latitude}, ${position.coords.longitude}`;
 // });
 
-
 const setUserLocation = (event) => {
   navigator.geolocation.getCurrentPosition(function(position) {
     const latitude = position.coords.latitude;
@@ -13,6 +12,7 @@ const setUserLocation = (event) => {
       latitude,
       longitude
     }
+    console.log(requestBody);
     fetch(`/set-user-location`, {
         headers: {
           'Content-Type': 'application/json'
@@ -30,5 +30,4 @@ const setUserLocation = (event) => {
   //   longitude: window.userLongitude
   // }
 };
-
 setUserLocation();

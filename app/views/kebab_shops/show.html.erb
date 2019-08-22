@@ -1,36 +1,27 @@
 <%= render 'shared/navbar' %>
-
-
-
-<h1><%= @kebab_shop.name %></h1>
-
-<h1>Closing time = <%= @week_day.closing_hour %>:00 </h1>
-
-<%= cl_image_tag @kebab_shop.photo, height: 300, width: 400, crop: :fill %>
-
-
-<h3> full address  : <%= @kebab_shop.address  %> </h3>
-<h3> address       : <%= @street %> </h3>
-<h3> street number : <%= @street_number %> </h3>
-<h3> postal code   : <%= @postal_code  %> </h3>
-<h3> city          : <%= @city %> </h3>
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-6">
-      <div id="map" style="width: 100%; height: 600px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    <div class="col-12">
+            <div id="map" style="width: 350px; height: 370px;"
+                  data-markers="<%= @markers.to_json %>"
+                  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+      <h3 class="kebab-font mt-3 text-center"><%= @kebab_shop.name %></h3>
+      <h4 class="text-center">Closes at: <%= @week_day.closing_hour %>:00 </h4>
+      <div class="height-width" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @kebab_shop.photo, crop: :fill %>)">
       </div>
+      <p class="text-center"><strong> <%= @kebab_shop.address  %> </strong></p>
+
+      <ul>
+        <% @kebab_shop.reviews.each do |review| %>
+        <ul> user : <%= review.user %> rating : <%= review.rating %>   </ul>
+        <% end %>
+      </ul>
+      <h3 class="text-center"> Average Rating : <%=  @average_rating %> </h3>
+      <br>
+      <%= render "shared/review-form" %>
     </div>
   </div>
 </div>
-
-<ul>
-  <% @kebab_shop.reviews.each do |review| %>
-  <ul> user : <%= review.user %> rating : <%= review.rating %>   </ul>
-  <% end %>
-</ul>
-<h3> rating average : <%=  @average_rating %> </h3>
-<%= render "shared/review-form" %>
 <%=  render 'shared/footer' %>
 

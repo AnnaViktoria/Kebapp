@@ -3,7 +3,15 @@ class KebabShopsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
 
   def index
-    @kebab_shops = KebabShop.all
+    if params[:filter] == 'distance'
+      @kebab_shops = KebabShop.near([55.6991, 12.5542], 5)
+    #elsif params[:filter] == :price
+      # Find active record query
+    elsif params[:filter] == 'rating'
+      @kebab_shops = KebabShop.order(rating: :desc)
+    else
+      @kebab_shops = KebabShop.all
+    end
     @markers = markers(@kebab_shops)
     @kebab_search = KebabShop.search_by_name(params[:name])
   end
@@ -13,12 +21,10 @@ class KebabShopsController < ApplicationController
 
     split_address
     average_rating
-
     @review   = Review.new
     @schedule = Schedule.new
     day_today = Date.today.strftime("%A").downcase!
     @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
-
     @markers = markers([@kebab_shop])
   end
 

@@ -17,4 +17,12 @@ class KebabShop < ApplicationRecord
   def coordinates
     [latitude, longitude]
   end
+
+  def opening_hours_today
+    weekdays = %w(sunday monday tuesday wednesday thursday friday saturday)
+    today_idx = Date.today.wday
+    today_string = weekdays[today_idx]
+    today_schedule = schedules.find_by_weekday(today_string)
+    return "#{today_schedule.opening_hour}:00-#{today_schedule.closing_hour}:00"
+  end
 end
