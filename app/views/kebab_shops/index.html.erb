@@ -9,19 +9,17 @@
           <%= render 'shared/kebab-card', kebab: kebab %>
         </div> <!-- end of col -->
       <% end%>
-  </div> <!-- end of row -->
-</div> <!-- end of container -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-6">
+
+
       <div id="map" style="width: 100%; height: 600px;"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
-    </div>
-  </div>
-</div>
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
+
+
 <%=  render 'shared/footer' %>
 
 <%= javascript_pack_tag "get-user-location" %>
