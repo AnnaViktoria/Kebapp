@@ -19,11 +19,10 @@ class KebabShopsController < ApplicationController
 
     split_address
     average_rating
-
-    @week_day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
     @review   = Review.new
     @schedule = Schedule.new
+    day_today = Date.today.strftime("%A").downcase!
+    @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
     @markers = markers([@kebab_shop])
   end
 
