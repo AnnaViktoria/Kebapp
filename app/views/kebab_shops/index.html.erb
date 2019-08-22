@@ -1,6 +1,8 @@
 <%= render 'shared/navbar' %>
 
-<h1><%= cookies[:anna] %></h1>
+<%= link_to "Sort by price", kebabs_path(filter: :price) %>
+<%= link_to "Sort by distance", kebabs_path(filter: :distance) %>
+<%= link_to "Sort by rating", kebabs_path(filter: :rating) %>
 
 <h1 class=text-center>Kebab Shops</h1>
 

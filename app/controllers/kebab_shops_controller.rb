@@ -1,7 +1,16 @@
 class KebabShopsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
   def index
-    @kebab_shops = KebabShop.all
+    if params[:filter] == :distance
+      @kebab_shops = KebabShop.near(coords, 5)
+    elsif params[:filter] == :price
+      # Find active record query
+    elsif params[:filter] == :rating
+      @kebab_shops = KebabShop.order(rating: :desc)
+      # Find active record query
+    else
+      @kebab_shops = KebabShop.all
+    end
     cookies[:anna] = 'anna'
 
     @markers = markers(@kebab_shops)
