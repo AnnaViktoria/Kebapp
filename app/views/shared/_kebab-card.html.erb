@@ -14,6 +14,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
                   </div>
                 </div>
               </div>
@@ -21,8 +22,8 @@
             <div class="back text-center">
               <div class="inner">
                 <div class="kebapp-card-text">
-                  <p class="kebapp-name-store">Kebabistan</p>
-                  <p class="kebapp-card-hours">Open: 17.00-02.00</p>
+                  <p class="kebapp-name-of-store"><%=kebab.name %></p>
+                  <p class="kebapp-card-hours">Opening Hours: <%= kebab.opening_hours_today %></p>
                   <p class="kebapp-card-distance">500m away</p>
                   <%= link_to "Show Location", kebab_shop_path(kebab), class: "btn btn-info"  %> <br>
                   <label for="card<%= kebab.id %>" class="flip-button flip-return" aria-hidden="true">
