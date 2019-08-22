@@ -1,5 +1,7 @@
 class KebabShopsController < ApplicationController
+
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
+
   def index
     if params[:filter] == 'distance'
       @kebab_shops = KebabShop.near([55.6991, 12.5542], 5)
@@ -10,8 +12,8 @@ class KebabShopsController < ApplicationController
     else
       @kebab_shops = KebabShop.all
     end
-
     @markers = markers(@kebab_shops)
+    @kebab_search = KebabShop.search_by_name(params[:name])
   end
 
   def show
@@ -73,7 +75,7 @@ class KebabShopsController < ApplicationController
   end
 
   def review_params
-    params.require(:kebab_shop).permit(:name, :address, :photo)
+    params.require(:kebab_shop).permit(:name)
   end
 
   def split_address

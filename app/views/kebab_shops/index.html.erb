@@ -1,10 +1,14 @@
 <%= render 'shared/navbar' %>
-
 <%#= link_to "Sort by price", kebabs_path(filter: :price) %>
 <%= link_to "Sort by distance", kebab_shops_path(filter: :distance) %>
 <%= link_to "Sort by rating", kebab_shops_path(filter: :rating) %>
-
 <h1 class=text-center>Kebab Shops</h1>
+
+<% if @kebab_search %>
+<h3> search = <%= @kebab_search.map(&:name).join(" - ")  %></h3>
+<% end %>
+
+
 
 <div class="container">
   <div class="row">

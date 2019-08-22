@@ -1,0 +1,27 @@
+#fixed-button-arrow{
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 50%;
+  margin-left: 20px;
+  padding: 10px 16px;
+  position:fixed;
+  z-index: 7;
+  border-color: black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+@media screen and (min-width: 1024px) {
+  #fixed-button-arrow {
+    display: none;
+  }
+}
