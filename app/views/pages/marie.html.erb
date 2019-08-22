@@ -1,14 +1,17 @@
-<div class="kebapp-card">
-        <input type="checkbox" id="card<%= kebab.id %>" class="more" aria-hidden="true">
+<h2>Maries new card</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="kebapp-card">
+        <input type="checkbox" id="card1" class="more" aria-hidden="true">
           <div class="kebabcard-content">
-            <div class="front" style="background-image: url('<%= cl_image_path kebab.photo, height: 300, width: 400, crop: :fill %>')">
+            <div class="front" style="background-image: url('https://withberlinlove.com/wp-content/uploads/2018/07/Gem%C3%BCse-D%C3%B6ner-im-Brot-at-R%C3%BCyam-Gem%C3%BCse-Kebab-Berlin.jpg')">
               <div class="inner">
                 <div class="text-center">
-                  <label for="card<%= kebab.id %>" class="button" aria-hidden="true">
-      <h2 class="kebapp-store-name"><strong><%= kebab.name %></strong></h2>
-
-    </label>
-                  <div class="flip-card-rating d-flex justify-content-center">
+                  <label for="card1" class="button" aria-hidden="true">
+                    <h2 class="kebapp-store-name">Kebabistan</h2>
+                  </label>
+                  <div class="rating d-flex justify-content-center">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -24,8 +27,7 @@
                   <p class="kebapp-name-store">Kebabistan</p>
                   <p class="kebapp-card-hours">Open: 17.00-02.00</p>
                   <p class="kebapp-card-distance">500m away</p>
-                  <%= link_to "Show Location", kebab_shop_path(kebab), class: "btn btn-info"  %> <br>
-                  <label for="card<%= kebab.id %>" class="flip-button flip-return" aria-hidden="true">
+                  <label for="card1" class="flip-button flip-return" aria-hidden="true">
                     <i class="fas fa-arrow-left"></i>
                   </label>
                 </div>
@@ -33,3 +35,10 @@
             </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+
