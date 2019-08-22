@@ -1,7 +1,7 @@
 <div class="kebapp-card">
         <input type="checkbox" id="card<%= kebab.id %>" class="more" aria-hidden="true">
           <div class="kebabcard-content">
-            <div class="front" style="background-image: url('<%= cl_image_path kebab.photo, height: 300, width: 400, crop: :fill %>')">
+            <div class="front" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path kebab.photo, height: 300, width: 400, crop: :fill %>')">
               <div class="inner">
                 <div class="text-center">
                   <label for="card<%= kebab.id %>" class="button" aria-hidden="true">
