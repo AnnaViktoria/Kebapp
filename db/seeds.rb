@@ -165,7 +165,7 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 1
 puts "Kebab Shop 13 created!"
 
 puts "Creating Kebab Shop 14"
-kebab_shop = KebabShop.new(name: "King Of Kebab Pizza & Grill", address: 'Nørrebrogade 20, 2200, København')
+kebab_shop = KebabShop.new(name: "King Of Kebab & Pizza", address: 'Nørrebrogade 20, 2200, København')
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566293958/Screenshot_2019-08-20_at_11.38.56_abty03.png"
 kebab_shop.save!
 
