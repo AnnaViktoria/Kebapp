@@ -3,7 +3,7 @@ class KebabShopsController < ApplicationController
   def index
     if params[:filter] == :distance
       @kebab_shops = KebabShop.near(coords, 5)
-    elsif params[:filter] == :price
+    #elsif params[:filter] == :price
       # Find active record query
     elsif params[:filter] == :rating
       @kebab_shops = KebabShop.order(rating: :desc)
