@@ -20,10 +20,6 @@ const setUserLocation = (event) => {
         method: "POST",
         body: JSON.stringify(requestBody)
       })
-        .then(response => response.json())
-        .then ((data) => {
-
-        })
   });
   // const requestBody = {
   //   latitude: window.userLatitude,

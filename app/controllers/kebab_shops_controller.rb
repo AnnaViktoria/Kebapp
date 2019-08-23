@@ -3,15 +3,7 @@ class KebabShopsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
 
   def index
-    if params[:filter] == 'distance'
-      @kebab_shops = KebabShop.near([55.6991, 12.5542], 5)
-    #elsif params[:filter] == :price
-      # Find active record query
-    elsif params[:filter] == 'rating'
-      @kebab_shops = KebabShop.order(rating: :desc)
-    else
-      @kebab_shops = KebabShop.all
-    end
+    @kebab_shops = KebabShop.all
     @markers = markers(@kebab_shops)
     @kebab_search = KebabShop.search_by_name(params[:name])
   end
@@ -59,6 +51,19 @@ class KebabShopsController < ApplicationController
     location = Geocoder.search([cookies[:user_lat], cookies[:user_lng]])
     cookies[:neighborhood] = location.first.data['address']['suburb']
     cookies[:city] = location.first.data['address']['city']
+  end
+
+  def filter
+    if params[:filter] == 'distance'
+      @kebab_shops = KebabShop.near([55.6991, 12.5542], 5)
+    #elsif params[:filter] == :price
+      # Find active record query
+    elsif params[:filter] == 'rating'
+      @kebab_shops = KebabShop.order(rating: :desc)
+    else
+      @kebab_shops = KebabShop.all
+    end
+    @filter = params[:filter]
   end
 
 

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Mukta+Mahee");
+
+.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background: #F1D302;
+  z-index: -5;
+}
+
+// #tab1:checked ~ .full-screen {
+//   background: #00BFFF;
+//   transition: 0.1s;
+// }
+
+// #tab2:checked ~ .full-screen {
+//   background: #D11149;
+//   transition: 0.1s;
+// }
+
+// #tab3:checked ~ .full-screen {
+//   background: #e3c90a;
+//   transition: 0.1s;
+// }
+
+input#tab3, input#tab2, input#tab1 {
+  display: none;
+}
+
+label#label3, label#label2, label#label1 {
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
