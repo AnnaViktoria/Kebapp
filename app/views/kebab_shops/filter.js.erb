@@ -1,0 +1,16 @@
+
+function refreshKebabShop() {
+  const kebabContainer = document.getElementById("kebab-row");
+  const fullScreen = document.getElementById('full-screen');
+  kebabContainer.dataset.filter = '<%= @filter %>'
+  const filter = kebabContainer.dataset.filter
+  console.log(fullScreen)
+  if (filter === 'distance') {
+    fullScreen.style.backgroundColor = '#00BFFF';
+  } else if (filter === 'rating') {
+    fullScreen.style.backgroundColor = '#D11149';
+  }
+  kebabContainer.innerHTML = '<%= j render "shared/kebab-card-list", kebab_shops: @kebab_shops %>';
+}
+
+refreshKebabShop();

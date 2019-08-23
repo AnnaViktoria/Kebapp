@@ -1,0 +1,73 @@
+.falafel-body {
+  margin: 0;
+  background-color: #F17105;
+  height: 100vh;
+}
+
+.falafel-container {
+  margin: 15vh auto 0 auto;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+.falafel-container ul {
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  max-width: 371px;
+}
+
+.ball {
+  width: 83px;
+  height: 83px;
+  background-color: #a86638;
+  border-radius: 100%;
+  animation: hover 1000ms cubic-bezier(1, 0, 1, 1.66) infinite alternate forwards;
+  z-index: -1;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.one {
+  animation-delay: 0;
+}
+
+.two {
+  animation-delay: 150ms;
+}
+
+.three {
+  animation-delay: 300ms;
+}
+
+.pita {
+  transition: all 300ms cubic-bezier(0, 0.36, 0.38, 0.95);
+  width: 90vw;
+}
+
+.push-down {
+  transform: translate(0,30px) scaleX(1.1);
+}
+
+@keyframes hover {
+  0% {
+
+  }
+  100% {
+    transform: translate(0,160px);
+  }
+}
+
+@keyframes push-down {
+  0% {
+
+  }
+  50% {
+
+  }
+  100% {
+    transform: translate(0,15px);
+  }
+}

@@ -1,0 +1,13 @@
+  <input type="radio" name="tabs" id="tab3"/>
+    <label for="tab3" id="label3">
+      <%= link_to "Sort by rating", filter_path(filter: :rating), remote: true %>
+    </label>
+
+  <input type="radio" name="tabs" id="tab1" checked/="checked/"/>
+    <label for="tab1" id="label1">
+      <%= link_to "Sort by distance", filter_path(filter: :distance), remote: true %>
+    </label>
+
+  <input type="radio" name="tabs" id="tab2"/>
+  <label for="tab2" id="label2">Pricing filter</label>
+<div class="full-screen" id="full-screen"></div>

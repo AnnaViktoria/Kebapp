@@ -1,8 +1,7 @@
 <%= render 'shared/navbar' %>
 <%#= link_to "Sort by price", kebabs_path(filter: :price) %>
-<%= link_to "Sort by distance", kebab_shops_path(filter: :distance) %>
-<%= link_to "Sort by rating", kebab_shops_path(filter: :rating) %>
-<h1 class=text-center>Kebab Shops</h1>
+<%#= link_to "Sort by distance", kebab_shops_path(filter: :distance) %>
+<%#= link_to "Sort by rating", kebab_shops_path(filter: :rating) %>
 
 <% if @kebab_search %>
    <% @kebab_search.map(&:name).join(" - ")  %>
@@ -10,8 +9,9 @@
 
 <%= render 'shared/search_button' %>
 
-<div class="container">
-  <div class="row">
+<div class="container blue-background">
+<%= render 'shared/colour-filter' %>
+  <div class="row" id="kebab-row">
       <% if !@kebab_search.empty? %>
         <% @kebab_search.each do |kebab| %>
           <div class="col-12 col-lg-6">
@@ -19,11 +19,7 @@
           </div> <!-- end of col -->
         <% end%>
       <% else %>
-        <% @kebab_shops.each do |kebab| %>
-          <div class="col-12 col-lg-6">
-            <%= render 'shared/kebab-card', kebab: kebab %>
-          </div> <!-- end of col -->
-        <% end%>
+        <%= render "shared/kebab-card-list", kebab_shops: @kebab_shops %>
       <% end %>
       <div id="map" style="width: 390px; height: 390px;"
             data-markers="<%= @markers.to_json %>"
