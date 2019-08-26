@@ -11,12 +11,12 @@
     <% end %>
 <!-- <i class="fas fa-star-half-alt"></i> -->
   </div>
-  <span class="price">35 kr</span>
+  <span class="price"><%= kebab.price.round(0) %> kr</span>
   <div class="desc">Closing at: <%= week_day.closing_hour %>:00</div>
   <%= cl_image_tag kebab.photo %>
   <div class="box-content">
     <div class="title"><%= kebab.name %></div>
-    <div class="distance">500m away!</div>
+    <div class="distance"> Distance : <%= (Geocoder::Calculations.distance_between([kebab.latitude, kebab.longitude], [cookies[:user_lat],cookies[:user_lng]]) * 1609.34).round(0)  %>m </div>
   </div>
 </div>
 <% end  %>
