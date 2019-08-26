@@ -23,18 +23,17 @@
 <br>
 <%= render 'shared/colour-filter' %>
 <%= render 'shared/search_button' %>
-      <%# end %>
-      <div id="map" style="width: 390px; height: 390px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-  </div> <!-- end of row -->
-</div> <!-- end of container -->
-
-
 <% if @kebab_search %>
    <% @kebab_search.map(&:name).join(" - ")  %>
 <% end %>
+      <%# end %>
+  </div> <!-- end of row -->
+</div> <!-- end of container -->
+  <div id="map" style="width: 390px; height: 390px;"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
 
 <%=  render 'shared/footer' %>
 
