@@ -1,4 +1,3 @@
-require "pry-byebug"
 
 class Review < ApplicationRecord
   belongs_to :kebab_shop
