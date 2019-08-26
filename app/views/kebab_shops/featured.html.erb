@@ -1,11 +1,13 @@
 <h1>This is the featured page</h1>
 
 <h2>Closest</h2>
-<p>This is where the card goes</p>
+<%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
+
 <h2>Cheapest</h2>
-<p>This is where the card goes</p>
+<%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
+
 <h2>Top Rated</h2>
-<p>This is where the card goes</p>
+<%= render 'shared/featured-kebab-card', kebab:  @review_kebab %>
 
 <br>
 <br>

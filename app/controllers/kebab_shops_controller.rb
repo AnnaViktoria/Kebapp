@@ -1,5 +1,4 @@
 class KebabShopsController < ApplicationController
-
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
 
   def index
@@ -70,6 +69,34 @@ class KebabShopsController < ApplicationController
     @filter = params[:filter]
   end
 
+  def featured
+    @near_kebab = KebabShop.new
+    @cheapest_kebab = KebabShop.new
+    @review_kebab = KebabShop.new
+
+    distance_old = (Geocoder::Calculations.distance_between([KebabShop.first.latitude, KebabShop.first.longitude], [55.6915195, 12.5574414]) * 1609.34).round(0)
+    old_price    = 1000
+    old_rating   = 0
+
+    KebabShop.all.each do |shop|
+      distance = (Geocoder::Calculations.distance_between([shop.latitude, shop.longitude], [55.6915195, 12.5574414]) * 1609.34).round(0)
+      if distance < distance_old
+        @near_kebab = shop
+        distance_old = distance
+      end
+
+      if shop.price < old_price
+        @cheapest_kebab = shop
+        old_price = shop.price
+      end
+
+      if shop.rating > old_rating
+        @review_kebab = shop
+        old_rating = shop.rating
+      end
+    end
+    @near_kebab = KebabShop.search_by_name(@near_kebab.name)
+  end
 
   private
 
