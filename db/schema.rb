@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_22_130228) do
+ActiveRecord::Schema.define(version: 2019_08_26_082149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,17 @@ ActiveRecord::Schema.define(version: 2019_08_22_130228) do
     t.float "latitude"
     t.float "longitude"
     t.string "photo"
-    t.integer "rating"
+    t.float "rating"
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "price"
+    t.bigint "kebab_shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kebab_shop_id"], name: "index_menus_on_kebab_shop_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -46,6 +56,7 @@ ActiveRecord::Schema.define(version: 2019_08_22_130228) do
     t.index ["kebab_shop_id"], name: "index_schedules_on_kebab_shop_id"
   end
 
+  add_foreign_key "menus", "kebab_shops"
   add_foreign_key "reviews", "kebab_shops"
   add_foreign_key "schedules", "kebab_shops"
 end

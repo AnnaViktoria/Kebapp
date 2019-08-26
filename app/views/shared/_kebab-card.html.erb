@@ -9,11 +9,29 @@
           <div class="card-rating d-flex justify-content-center">
                     <% (1..5).each do |value|%>
                       <% if value <= kebab.rating %>
-                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
                       <% else %>
-                        <i class="fa fa-star-o"></i>
+                                                          <i class="fa fa-star-o"></i>
                       <% end %>
-                    <% end %><!-- <i class="fas fa-star-half-alt"></i> -->
+                    <% end %>
+                                                      <!-- <i class="fas fa-star-half-alt"></i> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="back text-center">
+              <div class="inner">
+                <div class="kebapp-card-text">
+                  <p class="kebapp-name-of-store"><%=kebab.name %></p>
+                  <p class="kebapp-card-hours">Opening Hours: <%= kebab.opening_hours_today %></p>
+                  <p class="kebapp-card-distance">500m away</p>
+                  <%= link_to "Show Location", kebab_shop_path(kebab), class: "btn btn-info"  %> <br>
+                  <label for="card<%= kebab.id %>" class="flip-button flip-return" aria-hidden="true">
+                    <i class="fas fa-arrow-left"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
         </div>
             <div class="kebapp-card-text">
               <p class="kebapp-card-hours">Opening Hours: <%= kebab.opening_hours_today %></p>
