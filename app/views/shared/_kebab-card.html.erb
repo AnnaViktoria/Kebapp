@@ -1,48 +1,24 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
-
-<div class="kebapp-card">
-  <div class="kebabcard-content" style="background-image: linear-gradient(rgba(0,0,0,0.2) 0, rgba(0,0,0,0.2) 50%, rgba(251,117,37,0.2) 100% ), url('<%= cl_image_path kebab.photo, height: 300, width: 400, crop: :fill %>')">
-    <div class="text-center">
-      <label for="card<%= kebab.id %>" class="button" aria-hidden="true">
-        <h2 class="kebapp-store-name"><strong><%= kebab.name %></strong></h2>
-        </label>
-          <div class="card-rating d-flex justify-content-center">
-                    <% (1..5).each do |value|%>
-                      <% if value <= kebab.rating %>
-                                                        <i class="fas fa-star"></i>
-                      <% else %>
-                                                          <i class="fa fa-star-o"></i>
-                      <% end %>
-                    <% end %>
-                                                      <!-- <i class="fas fa-star-half-alt"></i> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="back text-center">
-              <div class="inner">
-                <div class="kebapp-card-text">
-                  <p class="kebapp-name-of-store"><%=kebab.name %></p>
-                  <p class="kebapp-card-hours">Opening Hours: <%= kebab.opening_hours_today %></p>
-                  <p class="kebapp-card-distance">500m away</p>
-                  <%= link_to "Show Location", kebab_shop_path(kebab), class: "btn btn-info"  %> <br>
-                  <label for="card<%= kebab.id %>" class="flip-button flip-return" aria-hidden="true">
-                    <i class="fas fa-arrow-left"></i>
-                  </label>
-                </div>
-              </div>
-            </div>
-        </div>
-            <div class="kebapp-card-text">
-              <p class="kebapp-card-hours">Opening Hours: <%= kebab.opening_hours_today %></p>
-              <p class="kebapp-card-distance">500m away</p>
-                </div>
-      </div>
-    </div>
+<% week_day = kebab.schedules.find_by(weekday: @day_today) %>
+<%= link_to kebab_shop_path(kebab) do %>
+<div class="box-wrapper mt-3">
+  <div class="anna-rating d-flex">
+    <% (1..5).each do |value|%>
+      <% if value <= kebab.rating %>
+        <i class="fas fa-star"></i>
+      <% else %>
+        <i class="fa fa-star-o"></i>
+      <% end %>
+    <% end %>
+<!-- <i class="fas fa-star-half-alt"></i> -->
+  </div>
+  <span class="price">35 kr</span>
+  <div class="desc">Closing at: <%= week_day.closing_hour %>:00</div>
+  <%= cl_image_tag kebab.photo %>
+  <div class="box-content">
+    <div class="title"><%= kebab.name %></div>
+    <div class="distance">500m away!</div>
   </div>
 </div>
-
-
-
-
+<% end  %>
+<!--
 
