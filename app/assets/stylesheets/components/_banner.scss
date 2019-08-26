@@ -1,11 +1,14 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+
+  }
 
 
 .wrapper {
