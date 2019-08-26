@@ -3,12 +3,15 @@
   <div class="row">
     <div class="d-flex justify-content-center flex-column">
 
+
 <h2 class="title">Closest</h2>
-Closest Card
+<%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
+
 <h2 class="title">Cheapest</h2>
-Cheapest Card
+<%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
+
 <h2 class="title">Top Rated</h2>
-Top Rated Card
+<%= render 'shared/featured-kebab-card', kebab:  @review_kebab %>
 
 <br>
 <br>
