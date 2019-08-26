@@ -1,5 +1,5 @@
- <% @kebab_shops.each do |kebab| %>
-  <div class="col-12 col-lg-6">
+<% @kebab_shops.each do |kebab| %>
+  <div class="d-flex justify-content-center flex-column align-items-center">
     <%= render 'shared/kebab-card', kebab: kebab %>
-  </div> <!-- end of col -->
+  </div>
 <% end%>

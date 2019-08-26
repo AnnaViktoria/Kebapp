@@ -17,9 +17,8 @@
   <%= cl_image_tag kebab.photo %>
   <div class="box-content">
     <div class="title"><%= kebab.name %></div>
-    <div class="distance"> Distance : <%= (Geocoder::Calculations.distance_between([kebab.latitude, kebab.longitude], [55.6915195,12.5574414]) * 1609.34).round(0)  %>m </div>
+    <div class="distance"><%= (Geocoder::Calculations.distance_between([kebab.latitude, kebab.longitude], [cookies[:user_lat],cookies[:user_lng]]) * 1609.34).round(0)  %>m away</div>
   </div>
 </div>
 <% end  %>
-<!--
 

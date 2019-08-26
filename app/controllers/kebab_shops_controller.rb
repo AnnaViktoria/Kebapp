@@ -56,11 +56,12 @@ class KebabShopsController < ApplicationController
     cookies[:city] = location.first.data['address']['city']
   end
 
-  def filter
+def filter
+    @day_today = Date.today.strftime("%A").downcase!
     if params[:filter] == 'distance'
       @kebab_shops = KebabShop.near([55.6991, 12.5542], 5)
     #elsif params[:filter] == :price
-      # Find active record query
+      # Find active record query
     elsif params[:filter] == 'rating'
       @kebab_shops = KebabShop.order(rating: :desc)
     else

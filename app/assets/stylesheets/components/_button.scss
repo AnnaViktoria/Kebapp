@@ -38,3 +38,36 @@
         margin-top: 6px;
     }
 }
+
+
+// Anna's see all kebabs button
+
+.see-all-kebabs-button {
+  display: flex;
+  justify-content: center
+}
+
+
+.all-kebabs {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 7px 20px;
+    width: 220px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.35);
+    background: hsla(260, 100%, 50%, 1);
+    cursor: pointer;
+    outline: 0 !important;
+}
+
+#all-kebabs:active a {
+    border-bottom-width: 0;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
