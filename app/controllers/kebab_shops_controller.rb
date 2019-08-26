@@ -5,6 +5,8 @@ class KebabShopsController < ApplicationController
   def index
     @kebab_shops = KebabShop.all
     @markers = markers(@kebab_shops)
+    @day_today = Date.today.strftime("%A").downcase!
+
     @kebab_search = KebabShop.search_by_name(params[:name])
   end
 
