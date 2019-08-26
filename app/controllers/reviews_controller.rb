@@ -1,12 +1,14 @@
 class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
-    @review.kebab_shop = KebabShop.find(params[:kebab_shop_id])
+    @kebab_shop = KebabShop.find(params[:kebab_shop_id])
+    @review.kebab_shop = @kebab_shop
     if @review.save
-      redirect_to kebab_shop_path(@review.kebab_shop)
+      all_ratings = @kebab_shop.reviews.map(&:rating)
+      @kebab_shop.rating = (all_ratings.sum / (all_ratings.size).to_f).round(1)
+      @kebab_shop.save!
+      redirect_to kebab_shop_path(@kebab_shop)
     else
-      @review.errors.full_messages
-      debug
       render :new
     end
   end

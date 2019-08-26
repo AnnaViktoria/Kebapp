@@ -12,9 +12,7 @@ class KebabShopsController < ApplicationController
 
   def show
     @kebab_shop = KebabShop.find(params[:id])
-
     split_address
-    average_rating
 
     @review   = Review.new
     @schedule = Schedule.new
@@ -23,8 +21,6 @@ class KebabShopsController < ApplicationController
     day_today = Date.today.strftime("%A").downcase!
     @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
     @markers  = markers([@kebab_shop])
-
-    @kebab_shop.rating = @average_rating
     @kebab_shop.save!
   end
 
@@ -112,13 +108,5 @@ class KebabShopsController < ApplicationController
         @street += " "
       end
     end
-  end
-
-  def average_rating
-    counter = 0
-    @kebab_shop.reviews.each do |review|
-      counter += review.rating
-    end
-    @average_rating = counter.to_f / @kebab_shop.reviews.size
   end
 end
