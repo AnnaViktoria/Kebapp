@@ -128,7 +128,9 @@ Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "
 puts "Kebab Shop 7 created!"
 
 puts "Creating Kebab Shop 8"
-kebab_shop = KebabShop.new(name: "Shawarma Kebap Palace", address: 'Frederiksberggade 30, 1459, København', rating: 0)
+
+kebab_shop = KebabShop.new(name: "Kebap Palace", address: 'Frederiksberggade 30, 1459, København', rating: 0)
+
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566292851/Screenshot_2019-08-20_at_11.20.31_vx2srz.png"
 kebab_shop.save!
 

@@ -1,16 +1,12 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
 
 <div class="kebapp-card">
-        <input type="checkbox" id="card<%= kebab.id %>" class="more" aria-hidden="true">
-          <div class="kebabcard-content">
-            <div class="front" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path kebab.photo, height: 300, width: 400, crop: :fill %>')">
-              <div class="inner">
-                <div class="text-center">
-                  <label for="card<%= kebab.id %>" class="button" aria-hidden="true">
-      <h2 class="kebapp-store-name"><strong><%= kebab.name %></strong></h2>
-
-    </label>
-                  <div class="flip-card-rating d-flex justify-content-center">
+  <div class="kebabcard-content" style="background-image: linear-gradient(rgba(0,0,0,0.2) 0, rgba(0,0,0,0.2) 50%, rgba(251,117,37,0.2) 100% ), url('<%= cl_image_path kebab.photo, height: 300, width: 400, crop: :fill %>')">
+    <div class="text-center">
+      <label for="card<%= kebab.id %>" class="button" aria-hidden="true">
+        <h2 class="kebapp-store-name"><strong><%= kebab.name %></strong></h2>
+        </label>
+          <div class="card-rating d-flex justify-content-center">
                     <% (1..5).each do |value|%>
                       <% if value <= kebab.rating %>
                                                         <i class="fas fa-star"></i>
@@ -37,4 +33,16 @@
               </div>
             </div>
         </div>
+            <div class="kebapp-card-text">
+              <p class="kebapp-card-hours">Opening Hours: <%= kebab.opening_hours_today %></p>
+              <p class="kebapp-card-distance">500m away</p>
+                </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
