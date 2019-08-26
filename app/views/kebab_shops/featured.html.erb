@@ -1,11 +1,14 @@
-<h1>This is the featured page</h1>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-center flex-column">
 
-<h2>Closest</h2>
-<p>This is where the card goes</p>
-<h2>Cheapest</h2>
-<p>This is where the card goes</p>
-<h2>Top Rated</h2>
-<p>This is where the card goes</p>
+<h2 class="title">Closest</h2>
+Closest Card
+<h2 class="title">Cheapest</h2>
+Cheapest Card
+<h2 class="title">Top Rated</h2>
+Top Rated Card
 
 <br>
 <br>
@@ -14,3 +17,8 @@
 <br>
 
 <%= link_to 'See All Kebabs', kebab_shops_path %>
+    </div>
+  </div>
+</div>
+
+<%=  render 'shared/footer' %>
