@@ -2,26 +2,18 @@
 <div class="container">
   <div class="row">
     <div class="d-flex justify-content-center flex-column">
+      <h2 class="title text-center mt-3">Closest</h2>
+      <%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
 
+      <h2 class="title text-center mt-3">Cheapest</h2>
+      <%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
 
-<h2 class="title">Closest</h2>
-<%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
-
-<h2 class="title">Cheapest</h2>
-<%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
-
-<h2 class="title">Top Rated</h2>
-<%= render 'shared/featured-kebab-card', kebab:  @review_kebab %>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
+      <h2 class="title text-center mt-3">Top Rated</h2>
+      <%= render 'shared/featured-kebab-card', kebab:  @review_kebab %>
     </div>
   </div>
 </div>
 
-<div class= "see-all-kebabs-button"><%= link_to 'See All Kebabs', kebab_shops_path, class: "all-kebabs"%></div>
+<div class= "see-all-kebabs-button mt-5"><%= link_to 'See All Kebabs', kebab_shops_path, class: "all-kebabs"%></div>
+
 <%=  render 'shared/footer' %>
