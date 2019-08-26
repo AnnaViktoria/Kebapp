@@ -21,11 +21,17 @@ class KebabShopsController < ApplicationController
 
     split_address
     average_rating
+
     @review   = Review.new
     @schedule = Schedule.new
+    @menu     = Menu.new
+
     day_today = Date.today.strftime("%A").downcase!
     @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
-    @markers = markers([@kebab_shop])
+    @markers  = markers([@kebab_shop])
+
+    @kebab_shop.rating = @average_rating
+    @kebab_shop.save!
   end
 
   def new

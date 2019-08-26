@@ -2,7 +2,7 @@ class KebabShop < ApplicationRecord
   include PgSearch
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
-
+  has_many :menus, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :schedules, dependent: :destroy
   mount_uploader :photo, PhotoUploader
