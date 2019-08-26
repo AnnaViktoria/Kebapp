@@ -3,11 +3,6 @@
 <%#= link_to "Sort by distance", kebab_shops_path(filter: :distance) %>
 <%#= link_to "Sort by rating", kebab_shops_path(filter: :rating) %>
 
-<% if @kebab_search %>
-   <% @kebab_search.map(&:name).join(" - ")  %>
-<% end %>
-
-<%= render 'shared/search_button' %>
 
 <div class="container">
   <%= render 'shared/colour-filter' %>
@@ -27,14 +22,19 @@
         <% end%>
       <% end %>
 
+<%= render 'shared/search_button' %>
       <%# end %>
-      <div id="map" style="width: 390px; height: 390px;"
+      <div id="map" class="mt-5" style="width: 390px; height: 390px;"
             data-markers="<%= @markers.to_json %>"
             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
   </div> <!-- end of row -->
 </div> <!-- end of container -->
 
+
+<% if @kebab_search %>
+   <% @kebab_search.map(&:name).join(" - ")  %>
+<% end %>
 
 <%=  render 'shared/footer' %>
 

@@ -34,6 +34,7 @@ a:active {
     margin: 0px auto 0;
     position: absolute;
     top: 40px;
+    left: 10px;
     font-family: 'Bangers', cursive;
     font-size: 30px;
     color: white;
@@ -65,6 +66,8 @@ a:active {
 
 .box-content{
   position: relative;
+   color: black;
+    text-decoration: none;
   z-index: 1;
 
     &:before {
@@ -73,6 +76,8 @@ a:active {
     height: 80px;
     position: absolute;
     display: block;
+    color: black;
+    text-decoration: none;
     background-color: #fff;
     transform: rotate(-8deg);
     top: -40px;
