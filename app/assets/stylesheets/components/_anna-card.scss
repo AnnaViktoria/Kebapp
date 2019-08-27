@@ -16,6 +16,7 @@ a:active {
     padding: 0;
     text-align: center;
     position: relative;
+    border-radius: 10px;
 
   img {
       width: 100%;
@@ -51,6 +52,8 @@ a:active {
   right: 10px;
   color: white;
   background-color: black;
+  border-radius: 5px;
+  padding: 3px 10px;
 }
 
 }
