@@ -11,9 +11,6 @@
         <%= f.radio_button(:rating, "2") %> <%= f.label(:rating.to_s + "_2") %>
         <%= f.radio_button(:rating, "1") %> <%= f.label(:rating.to_s + "_1") %>
       </fieldset>
-
-      <%= f.label :content, 'Your message' %>
-      <%= f.input :content, label: false %>
       <%= f.submit class: "btn btn-primary"%>
     <% end %>
   </div>
