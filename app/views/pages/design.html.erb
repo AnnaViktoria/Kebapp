@@ -7,10 +7,10 @@
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="circle">
       <circle cx="8" cy="8" r="7.5"></circle>
-    </symbol>
+          </symbol>
 
-    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="check">
-      <path d="m.65909042 4.04356308 2.43156433 2.43156433 5.83150483-5.83150482" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="check">
+       <path d="m.65909042 4.04356308 2.43156433 2.43156433 5.83150483-5.83150482" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.25"/>
     </symbol>
   </svg>
 
@@ -20,7 +20,7 @@
 
 <div class="container">
   <div class="row">
-    <% 6.times do %>
+    <% 1.times do %>
     <div class="col-12 col-lg-6">
       <div class="kebapp-card">
         <div class="kebapp-card-top" style="background-image: url('https://withberlinlove.com/wp-content/uploads/2018/07/Gem%C3%BCse-D%C3%B6ner-im-Brot-at-R%C3%BCyam-Gem%C3%BCse-Kebab-Berlin.jpg')">
@@ -42,9 +42,37 @@
 
 <%= javascript_pack_tag 'frontpagebutton' %>
 
+
 <h2>Button Design take 2</h2>
 
 <%= render "shared/new-button" %>
+
+<h2>This is a new card</h2>
+
+<!-- <div class="container">
+  <div class="row">
+    <% 3.times do  %>
+    <div class="col-12 col-lg-6">
+      <div class="box-wrapper mt-3">
+        <div class="anna-rating d-flex">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div> -->
+              <span class="price">35 kr</span>
+              <div class="desc">Closes at 01:00</div>
+          <img src="https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566290368/Screenshot_2019-08-20_at_10.39.02_gdb9q6.png" alt="rhcp" />
+          <div class="box-content">
+            <div class="title">Strøgshawarma</div>
+            <div class="distance">300m away!</div>
+          </div>
+    </div>
+  </div> <!-- end of col -->
+  <% end %>
+</div>
+</div>
 
 
 

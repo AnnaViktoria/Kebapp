@@ -12,13 +12,20 @@
       <div class="height-width" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @kebab_shop.photo, crop: :fill %>)">
       </div>
       <p class="text-center"><strong> <%= @kebab_shop.address  %> </strong></p>
+      <p class="text-center"><strong> <%= @kebab_shop.rating.to_s  %> </strong></p>
 
       <ul>
         <% @kebab_shop.reviews.each do |review| %>
         <ul> user : <%= review.user %> rating : <%= review.rating %>   </ul>
         <% end %>
       </ul>
-      <h3 class="text-center"> Average Rating : <%=  @average_rating %> </h3>
+      <h3 class="text-center"> Average Rating :
+       <% if @kebab_shop.rating == 0 %>
+          No review!
+       <% else %>
+        <%=  @kebab_shop.rating %>
+       <% end %>
+     </h3>
       <br>
       <%= render "shared/review-form" %>
     </div>
