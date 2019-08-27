@@ -8,6 +8,8 @@ function refreshKebabShop() {
     fullScreen.style.backgroundColor = '#00BFFF';
   } else if (filter === 'rating') {
     fullScreen.style.backgroundColor = '#D11149';
+  } else if (filter === 'price') {
+    fullScreen.style.backgroundColor = '#3EC300';
   }
 
   kebabContainer.innerHTML = '<%= j render "shared/kebab-card-list", kebab_shops: @kebab_shops %>';
