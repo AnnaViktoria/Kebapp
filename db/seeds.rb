@@ -25,7 +25,7 @@ Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "
 puts "Kebab Shop 1 created!"
 
 puts "Creating Kebab Shop 2"
-kebab_shop = KebabShop.new(name: "Strøgshawarma", address: 'Frederiksberggade 5, 1459, København', rating: 0, price: 62)
+kebab_shop = KebabShop.new(name: "Strøgshawarma", address: 'Frederiksberggade 5, 1459, København', rating: 5, price: 62)
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566290529/Screenshot_2019-08-20_at_10.41.51_byflaw.png"
 kebab_shop.save!
 
@@ -42,17 +42,17 @@ Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "
 puts "Kebab Shop 2 created!"
 
 puts "Creating Kebab Shop 3"
-kebab_shop = KebabShop.new(name: "Ahab's Kebab", address: 'Snaregade 6, 1205, København', rating: 0, price: 64)
-kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566478042/nil-martin-vela-bitxo-gordo-render-2_ljxizj.jpg"
+kebab_shop = KebabShop.new(name: "Kebabistan", address: 'Nørrebrogade 162, 2200, København', rating: 4, price: 42)
+kebab_shop.remote_photo_url = "https://s3-eu-west-1.amazonaws.com/images.dagensmenu.dk/55e74123da887622691747/aa04da39b000dbc3006217e4b9545554d6a6586e-960x720.jpg"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 1 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 1 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 1 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 1 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 6 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 6 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 1 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
