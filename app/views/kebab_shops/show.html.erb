@@ -1,9 +1,9 @@
 <%= render 'shared/navbar' %>
-<div class="background-featured">
-  <div id="map" style="width: 390px; height: 390px;"
+  <div id="map" style="width: 100%; height: 300px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+<div class="background-featured">
 <div class="container">
   <div class="row">
     <div class="col-12">
