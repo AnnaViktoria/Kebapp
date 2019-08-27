@@ -1,8 +1,7 @@
 <div class="container">
-  <div class="review-container">
     <%= simple_form_for [@kebab_shop, @review] do |f| %>
-      <%= f.label :user, 'Your name' %>
-      <%= f.input :user, label: false %>
+  <div class="review-container">
+      <%= f.input :user, label: false, placeholder: 'Your name' %>
 
       <fieldset class="rating">
         <%= f.radio_button(:rating, "5") %> <%= f.label(:rating.to_s + "_5") %>
@@ -11,7 +10,7 @@
         <%= f.radio_button(:rating, "2") %> <%= f.label(:rating.to_s + "_2") %>
         <%= f.radio_button(:rating, "1") %> <%= f.label(:rating.to_s + "_1") %>
       </fieldset>
-      <%= f.submit class: "btn btn-primary"%>
-    <% end %>
+      <%= f.submit class: "text-center rating-kebabs"%>
   </div>
+    <% end %>
 </div>
