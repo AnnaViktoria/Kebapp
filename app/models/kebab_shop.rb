@@ -1,13 +1,15 @@
+
 class KebabShop < ApplicationRecord
   include PgSearch
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
-
+  has_many :menus, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :schedules, dependent: :destroy
   mount_uploader :photo, PhotoUploader
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true, uniqueness: true
+  validates :rating, numericality: true
 
   pg_search_scope :search_by_name, against: [:name],
     using: {

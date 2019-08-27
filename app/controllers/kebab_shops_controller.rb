@@ -1,23 +1,26 @@
 class KebabShopsController < ApplicationController
-
   skip_before_action :verify_authenticity_token, only: [:set_user_location]
 
   def index
     @kebab_shops = KebabShop.all
     @markers = markers(@kebab_shops)
+    @day_today = Date.today.strftime("%A").downcase!
+
     @kebab_search = KebabShop.search_by_name(params[:name])
   end
 
   def show
     @kebab_shop = KebabShop.find(params[:id])
-
     split_address
-    average_rating
+
     @review   = Review.new
     @schedule = Schedule.new
+    @menu     = Menu.new
+
     day_today = Date.today.strftime("%A").downcase!
     @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
-    @markers = markers([@kebab_shop])
+    @markers  = markers([@kebab_shop])
+    @kebab_shop.save!
   end
 
   def new
@@ -53,11 +56,12 @@ class KebabShopsController < ApplicationController
     cookies[:city] = location.first.data['address']['city']
   end
 
-  def filter
+def filter
+    @day_today = Date.today.strftime("%A").downcase!
     if params[:filter] == 'distance'
       @kebab_shops = KebabShop.near([55.6991, 12.5542], 5)
     #elsif params[:filter] == :price
-      # Find active record query
+      # Find active record query
     elsif params[:filter] == 'rating'
       @kebab_shops = KebabShop.order(rating: :desc)
     else
@@ -66,6 +70,34 @@ class KebabShopsController < ApplicationController
     @filter = params[:filter]
   end
 
+  def featured
+    @near_kebab = KebabShop.new
+    @cheapest_kebab = KebabShop.new
+    @review_kebab = KebabShop.new
+
+    distance_old = (Geocoder::Calculations.distance_between([KebabShop.first.latitude, KebabShop.first.longitude], [55.6915195, 12.5574414]) * 1609.34).round(0)
+    old_price    = 1000
+    old_rating   = 0
+
+    KebabShop.all.each do |shop|
+      distance = (Geocoder::Calculations.distance_between([shop.latitude, shop.longitude], [55.6915195, 12.5574414]) * 1609.34).round(0)
+      if distance < distance_old
+        @near_kebab = shop
+        distance_old = distance
+      end
+
+      if shop.price < old_price
+        @cheapest_kebab = shop
+        old_price = shop.price
+      end
+
+      if shop.rating > old_rating
+        @review_kebab = shop
+        old_rating = shop.rating
+      end
+    end
+    @near_kebab = KebabShop.search_by_name(@near_kebab.name)
+  end
 
   private
 
@@ -104,13 +136,5 @@ class KebabShopsController < ApplicationController
         @street += " "
       end
     end
-  end
-
-  def average_rating
-    counter = 0
-    @kebab_shop.reviews.each do |review|
-      counter += review.rating
-    end
-    @average_rating = counter.to_f / @kebab_shop.reviews.size
   end
 end
