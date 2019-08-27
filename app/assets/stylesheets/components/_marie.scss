@@ -1,39 +1,96 @@
-
-svg {
-    width: 80vw;
-    position: fixed;
-    top: 50vh;
-    left: 50vw;
-    max-width: 300px;
-    transform: translateY(-50%) translateX(-50%);
-    filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.3));
-
-    path {
-        cursor: pointer;
-        animation: blob 3s infinite forwards;
-        transform-origin: 50% 50%;
-    }
-
-    text {
-        font-size: 60px;
-        font-family: 'Bangers', cursive;
-        color: white;
-    }
+@import url('https://fonts.googleapis.com/css?family=Rubik:900');
+/*box gradient*/
+a:after {
+ content: '';
+ background: linear-gradient(120deg, #FEAC5E, #C779D0, #4BC0C8);
+ background-size: 400% 400%;
+ -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+ -moz-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+ -webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+ animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+}
+/*text gradient*/
+a  > span {
+ display: block;
+ background: linear-gradient(120deg, #FEAC5E, #C779D0, #4BC0C8);
+ background-size: 400% 400%;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ -moz-animation: gradient 3s ease-in-out infinite;
+ -webkit-animation: gradient 3s ease-in-out infinite;
+ animation: gradient 3s ease-in-out infinite;
+}
+.text-formatting, a {
+ font-family: 'Rubik', sans-serif;
+ font-size: 30px;
+ text-decoration: none;
+ color: #FEAC5E, #C779D0, #4BC0C8;
 }
 
-@keyframes blob {
-    25% {
-        d: path(
-            "M 90 210 C 90 180 110 160 130 160 C 160 160 180 140 200 130 C 230 120 270 100 290 140 C 310 170 340 100 360 140 C 370 160 390 180 390 210 C 390 240 380 290 350 280 C 330 270 300 280 280 290 C 260 300 230 300 220 290 C 200 270 160 310 140 280 C 130 260 90 240 90 210 "
-        );
-        transform: rotate(0deg);
-    }
-    50% {
-        d: path(
-            "M 90 210 C 90 180 100 150 120 130 C 150 100 180 140 200 130 C 230 120 270 100 290 140 C 300 160 330 130 360 140 C 390 150 390 180 390 210 C 390 240 380 300 350 280 C 330 270 320 230 280 260 C 260 280 220 310 200 290 C 180 270 160 280 140 280 C 110 280 90 240 90 210"
-        );
-    }
+a.bttn-marie:active {
+ text-decoration: none;
+}
 
+
+/* motion of text */
+@keyframes gradient {
+ 0% {
+   background-position: 14% 0%;
+ }
+ 50% {
+   background-position: 87% 100%;
+ }
+ 100% {
+   background-position: 14% 0%;
+ }
+}
+
+/*motion of border */
+@-webkit-keyframes border {
+ 0% {
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 5% 100%, 5% 5%, 95% 5%, 95% 95%, 5% 95%, 5% 100%, 100% 100%, 100% 0%);
+ }
+ 25% {
+   -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+ }
+ 50% {
+   -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+ }
+ 75% {
+   -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+ }
+ 100% {
+   -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+ }
+}
+/*button*/
+.flex {
+ min-height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.bttn-marie {
+ width: 250px;
+ height: 80px;
+ line-height: 90px;
+ text-align: center;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-weight: bold;
+ position: relative;
+}
+
+.bttn-marie:after {
+ transition: 0.2s all ease;
+ position: absolute;
+ top: 150px;
+ left: 0;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ border-radius: 3px;
 }
 
 
