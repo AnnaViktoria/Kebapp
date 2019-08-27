@@ -2,6 +2,8 @@
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
 @import url(https://fonts.googleapis.com/css?family=Acme);
 
+
+
 a:active {
   text-decoration: none;
 }
@@ -72,7 +74,7 @@ a:active {
 
     &:before {
     content: '';
-    width: 180%;
+    width: 120%;
     height: 400px;
     position: absolute;
     display: block;
