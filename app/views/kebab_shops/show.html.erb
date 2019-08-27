@@ -1,13 +1,13 @@
 <%= render 'shared/navbar' %>
 <div class="background-featured">
+  <div id="map" style="width: 390px; height: 390px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 <div class="container">
   <div class="row">
     <div class="col-12">
       <br>
-            <div id="map" style="width: 350px; height: 370px;"
-                  data-markers="<%= @markers.to_json %>"
-                  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
       <h3 class="kebab-font mt-3 text-center"><%= @kebab_shop.name %></h3>
       <h4 class="text-center">Closes at: <%= @week_day.closing_hour %>:00 </h4>
       <div class="height-width" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @kebab_shop.photo, crop: :fill %>)">
