@@ -9,13 +9,13 @@ kebab_shop = KebabShop.new(name: "Durum Bar", address: 'Nørregade 53, 1165, Kø
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566290368/Screenshot_2019-08-20_at_10.39.02_gdb9q6.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 10,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 10,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 10,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 3 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 6 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 6 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 12 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 10,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 10,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 10,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 15 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 16 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 16 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 24 ).save!
 
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
@@ -81,13 +81,13 @@ kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload
 kebab_shop.save!
 
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 10 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 22 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 5 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 10 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 22 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -104,7 +104,7 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 7 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 7 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 10 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 22 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -135,13 +135,13 @@ kebab_shop = KebabShop.new(name: "Palazzo Pizza", address: 'Kronprinsessegade 54
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566293065/Screenshot_2019-08-20_at_11.24.09_d2jfcu.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 10 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 22 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -152,13 +152,13 @@ kebab_shop = KebabShop.new(name: "Beyti", address: 'Nørrebrogade 13, 2200, Køb
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566293225/Screenshot_2019-08-20_at_11.26.51_flrgxb.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 12 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 24 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 6 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 6 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 12 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 24 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -186,13 +186,13 @@ kebab_shop = KebabShop.new(name: "Pizza Kebab House", address: 'Blågårdsgade 3
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566294211/Screenshot_2019-08-20_at_11.43.17_cvjimd.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 12,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 12,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 12,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 12,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 12,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 10 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 12,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 12,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 12,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 12,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 12,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 22  ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 22 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -203,13 +203,13 @@ kebab_shop = KebabShop.new(name: "Safir Kebab", address: 'Jagtvej 23, 2200, Køb
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566307379/Screenshot_2019-08-20_at_15.22.44_ugng6a.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 12 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 24 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -220,13 +220,13 @@ kebab_shop = KebabShop.new(name: "Den Grønne Shawarma", address: ' Falkoner All
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566308036/Screenshot_2019-08-20_at_15.33.37_rzq9iu.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 10,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 10,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 10,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 10 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 10 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 10,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 10,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 10,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 10,  closing_hour: 22 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 10,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 22 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -254,13 +254,13 @@ kebab_shop = KebabShop.new(name: "Falafelkælderen", address: 'Rantzausgade 14, 
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566309072/Screenshot_2019-08-20_at_15.50.52_alunwt.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 11 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 11 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 23 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 23 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
@@ -271,13 +271,13 @@ kebab_shop = KebabShop.new(name: "Kebab Town", address: 'Falkoner Alle 44, 2000,
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566309239/Screenshot_2019-08-20_at_15.53.46_t0z4bk.png"
 kebab_shop.save!
 
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 12 ).save!
-Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 12 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "monday",    opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "tuesday",   opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "wednesday", opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "thursday",  opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 24 ).save!
+Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 24 ).save!
 
 Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
 Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
