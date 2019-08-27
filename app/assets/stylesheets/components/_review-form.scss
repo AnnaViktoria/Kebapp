@@ -4,13 +4,14 @@
   width: 300px;
   display: flex;
   justify-content: center;
-  background-color: lightgrey;
-  color: white;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
 .review-rating{
     display: flex;
- flex-direction: row;
+    flex-direction: row;
 }
 
 .fa-star, .fa-star-o, .fa-star-half-o {
@@ -19,8 +20,8 @@
 
 
 .rating {
-  margin-left: 10%;
-    float:left;
+  // margin-left: 10%;
+  // float:left;
 }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
