@@ -10,7 +10,7 @@ a:after {
  animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
 }
 /*text gradient*/
-a  > span {
+a.bttn-marie  > span {
  display: block;
  background: linear-gradient(120deg, #FEAC5E, #C779D0, #4BC0C8);
  background-size: 400% 400%;
@@ -20,7 +20,7 @@ a  > span {
  -webkit-animation: gradient 3s ease-in-out infinite;
  animation: gradient 3s ease-in-out infinite;
 }
-.text-formatting, a {
+.text-formatting, a.bttn-marie {
  font-family: 'Rubik', sans-serif;
  font-size: 30px;
  text-decoration: none;
