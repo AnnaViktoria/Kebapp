@@ -1,8 +1,11 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1519145897500-869c40ccb024?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=582&q=80;">
-       <div> <%= link_to 'Kebab Me', loading_path, class: 'frontbutton'%> </div>
-      </div>
-
+   <div class="flex">
+    <%= link_to loading_path, class: "bttn-marie" do %>
+      <span>Kebab Me</span>
+    <% end %>
+  </div>
+</div>
 
 
 <%= javascript_pack_tag "get-user-location" %>
