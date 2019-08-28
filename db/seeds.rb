@@ -37,8 +37,6 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
 puts "Kebab Shop 2 created!"
 
 puts "Creating Kebab Shop 3"
@@ -165,7 +163,7 @@ Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "
 puts "Kebab Shop 10 created!"
 
 puts "Creating Kebab Shop 11"
-kebab_shop = KebabShop.new(name: "King Of Kebab Pizza & Grill", address: 'Nørrebrogade 20, 2200, København', rating: 0, price: 60)
+kebab_shop = KebabShop.new(name: "King Kebab & Pizza", address: 'Nørrebrogade 20, 2200, København', rating: 0, price: 60)
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566293958/Screenshot_2019-08-20_at_11.38.56_abty03.png"
 kebab_shop.save!
 
