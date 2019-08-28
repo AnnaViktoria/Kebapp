@@ -3,7 +3,7 @@
 
   <span class="price"><%= kebab.price.round(0) %> kr</span>
   <div class="desc">Closing at: <%= kebab.schedules.first.closing_hour %>:00</div>
-  <%= cl_image_tag kebab.photo %>
+  <%= cl_image_tag kebab.photo, class: "kebabphoto" %>
   <div class="box-content d-flex flex-row justify-content-center">
     <div class="title"><%= kebab.name %></div>
       <div class="anna-rating d-flex justify-content-center">
