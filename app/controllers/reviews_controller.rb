@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
       all_ratings = @kebab_shop.reviews.map(&:rating)
       @kebab_shop.rating = (all_ratings.sum / (all_ratings.size).to_f).round(1)
       @kebab_shop.save!
-      redirect_to kebab_shop_path(@kebab_shop)
+      redirect_to kebab_shops_path
     else
       render :new
     end

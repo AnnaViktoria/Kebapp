@@ -16,12 +16,6 @@
       <% if !@kebab_shop.menus.empty?%>
         <%= render "shared/menu-kebab" %>
       <% end %>
-      <h3 class="text-center font-style"> Average Rating :
-       <% if @kebab_shop.rating == 0 %>
-          No rating!
-       <% else %>
-        <%=  @kebab_shop.rating %>
-       <% end %>
      </h3>
       <br>
       <%= render "shared/review-form" %>
