@@ -63,3 +63,54 @@ a {
     cursor: pointer;
     outline: 0 !important;
 }
+
+a{
+  color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.distance-click{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  width: 120px;
+  border-radius: 10px;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  margin: 5px;
+  background-color: red;
+  box-shadow: 5px 10px 18px black;
+  border: 5px solid red;
+}
+
+.price-click{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  width: 130px;
+  border-radius: 10px;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  margin: 5px;
+  background-color: red;
+  box-shadow: 5px 10px 18px black;
+  border: 5px solid red;
+}
+
+.rating-click{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  width: 120px;
+  border-radius: 10px;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  margin: 5px;
+  background-color: red;
+  box-shadow: 5px 10px 18px black;
+  border: 5px solid red;
+}
