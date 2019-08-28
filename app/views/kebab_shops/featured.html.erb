@@ -3,14 +3,18 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center">
-      <h2 class="title text-center mt-3">Closest</h2>
-      <%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
-
-      <h2 class="title text-center mt-3">Cheapest</h2>
-      <%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
-
-      <h2 class="title text-center mt-3">Top Rated</h2>
-      <%= render 'shared/featured-kebab-card', kebab: @review_kebab %>
+      <% if !@near_kebab.empty?%>
+        <h2 class="title text-center mt-3">Closest</h2>
+        <%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
+      <% end %>
+      <% if @cheapest_kebab %>
+        <h2 class="title text-center mt-3">Cheapest</h2>
+        <%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
+      <% end %>
+      <% if @review_kebab %>
+        <h2 class="title text-center mt-3">Top Rated</h2>
+        <%= render 'shared/featured-kebab-card', kebab: @review_kebab %>
+      <% end %>
     </div>
   </div>
 </div>

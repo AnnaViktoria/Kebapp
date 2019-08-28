@@ -1,0 +1,10 @@
+<div class="container menu-container">
+  <div class="justify-content-center">
+    <div class= "see-all-kebabs-button mt-3 filter-all-kebabs menu-title-button"> Menus </div>
+    <% @kebab_shop.menus.each do |menu| %>
+      <h5 class ="font-style menu-title"><%=menu.title%></h5>
+      <h6 class ="font-style menu-descritpion"><%=menu.description%></h6>
+      <h6 class ="font-style menu-price"><%=menu.price%> DKK</h6>
+    <% end %>
+  </div>
+</div>
