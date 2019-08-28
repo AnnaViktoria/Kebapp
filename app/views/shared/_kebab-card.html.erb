@@ -1,7 +1,7 @@
 <% week_day = kebab.schedules.find_by(weekday: @day_today) %>
 
 <%= link_to kebab_shop_path(kebab) do %>
-<div class="box-wrapper mt-3">
+<div class="box-wrapper mt-3 hvr-bounce-out">
   <span class="price"><%= kebab.price.round(0) %> kr</span>
   <div class="desc"> Closing at: <%= week_day.closing_hour %>:00 </div>
   <%= cl_image_tag kebab.photo %>
