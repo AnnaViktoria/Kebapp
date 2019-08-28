@@ -23,14 +23,12 @@ a:active {
     transform: scale(0.8);
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-}
   }
 
-
-  img {
-      width: 100%;
-      height: 150px;
-      text-decoration: none;
+  img.kebabphoto {
+  width: 100%;
+  height: 150px;
+  text-decoration: none;
       color: black;
     }
 
@@ -106,7 +104,6 @@ a.distance {
 color: black;
 }
 
-}
 
 #google-directions {
   text-decoration: none;
@@ -117,6 +114,8 @@ color: black;
   right: 30px;
   font-size: 30px;
 
+  }
+}
 }
 
 
