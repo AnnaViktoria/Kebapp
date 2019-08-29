@@ -82,6 +82,10 @@ a.bttn-marie:active {
  position: relative;
 }
 
+.bttn-marie-background-color {
+background-color: rgba(10, 10, 10, 0.3);
+}
+
 .bttn-marie:after {
  transition: 0.2s all ease;
  position: absolute;
