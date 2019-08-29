@@ -49,7 +49,8 @@
 
 .rating:not(:checked) > label:before {
     content: '★ ';
-    margin-left: -4px;
+    margin-left: -6px;
+    padding-left: -2px;
 }
 
 .rating > input:checked ~ label {
