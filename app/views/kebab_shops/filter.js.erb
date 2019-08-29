@@ -1,16 +1,36 @@
-
 function refreshKebabShop() {
   const kebabContainer = document.getElementById("kebab-row");
   const fullScreen = document.getElementById('full-screen');
+
+  const filterClosest = document.getElementById('filter-id-button-closest');
+  const filterPrice = document.getElementById('filter-id-button-price');
+  const filterRating = document.getElementById('filter-id-button-rating');
+
+
   kebabContainer.dataset.filter = '<%= @filter %>'
   const filter = kebabContainer.dataset.filter
   console.log(fullScreen)
-  if (filter === 'distance') {
-    fullScreen.style.backgroundColor = '#00BFFF';
+ if (filter === 'distance') {
+    fullScreen.style.backgroundColor = '#FEAC5E';
+    filterClosest.className = 'distance-click';
+    filterPrice.className = 'filter-all-kebabs';
+    filterRating.className = 'filter-all-kebabs';
+
   } else if (filter === 'rating') {
-    fullScreen.style.backgroundColor = '#D11149';
+    fullScreen.style.backgroundColor = '#e597cf';
+    filterRating.className = 'rating-click';
+    filterClosest.className = 'filter-all-kebabs';
+    filterPrice.className = 'filter-all-kebabs';
+
+  } else if (filter === 'price') {
+    fullScreen.style.backgroundColor = '#4BC0C8';
+    filterPrice.className = 'price-click';
+    filterClosest.className = 'filter-all-kebabs';
+    filterRating.className = 'filter-all-kebabs';
   }
+
   kebabContainer.innerHTML = '<%= j render "shared/kebab-card-list", kebab_shops: @kebab_shops %>';
 }
 
 refreshKebabShop();
+

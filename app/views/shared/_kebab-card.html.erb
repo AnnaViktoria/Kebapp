@@ -1,4 +1,4 @@
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+<% week_day = kebab.schedules.find_by(weekday: @day_today) %>
 
 <div class="kebapp-card">
         <input type="checkbox" id="card<%= kebab.id %>" class="more" aria-hidden="true">
@@ -38,3 +38,28 @@
             </div>
         </div>
       </div>
+<%= link_to kebab_shop_path(kebab) do %>
+<div class="box-wrapper mt-3 hvr-bounce-out">
+  <span class="price"><%= kebab.price.round(0) %> kr</span>
+  <div class="desc"> Closing at: <%= week_day.closing_hour %>:00 </div>
+  <%= cl_image_tag kebab.photo, class: "kebabphoto" %>
+  <div class="box-content d-flex flex-row justify-content-center">
+    <div class="title"><%= kebab.name %></div>
+    <div class="anna-rating-index-page d-flex justify-content-center">
+    <% (1..5).each do |value|%>
+      <% if value <= kebab.rating %>
+        <i class="fas fa-star"></i>
+      <% else %>
+        <i class="fa fa-star-o"></i>
+      <% end %>
+    <% end %>
+<!-- <i class="fas fa-star-half-alt"></i> -->
+  </div>
+    <div class="distance"><%= (Geocoder::Calculations.distance_between([kebab.latitude, kebab.longitude], [55.6915195,12.5574414]) * 1609.34).round(0)  %>m away </div>
+    <%= link_to "https://www.google.com/maps?saddr=My+Location&daddr=#{kebab.address}", id: "google-directions" do %>
+  <i class="fas fa-directions"></i>
+<% end %>
+  </div>
+</div>
+<% end  %>
+

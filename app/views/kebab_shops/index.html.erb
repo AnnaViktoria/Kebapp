@@ -1,13 +1,25 @@
 <%= render 'shared/navbar' %>
-<%#= link_to "Sort by price", kebabs_path(filter: :price) %>
-<%#= link_to "Sort by distance", kebab_shops_path(filter: :distance) %>
-<%#= link_to "Sort by rating", kebab_shops_path(filter: :rating) %>
+<div class="background-featured">
+<div id = "full-screen" style="height: 100%; width: 100%;">
 
-<% if @kebab_search %>
-   <% @kebab_search.map(&:name).join(" - ")  %>
-<% end %>
+     <%= render 'shared/colour-filter' %>
+    <div id="kebab-row">
+        <% if !@kebab_search.empty? %>
+          <% @kebab_search.each do |kebab| %>
+            <div class="d-flex justify-content-center flex-column align-items-center">
+              <%= render 'shared/kebab-card', kebab: kebab %>
+            </div> <!-- end of col -->
+        <!-- end of col -->
+          <% end%>
+        <% else %>
+          <% @kebab_shops.each do |kebab| %>
+            <div class="d-flex justify-content-center flex-column align-items-center">
+              <%= render 'shared/kebab-card', kebab: kebab %>
+            </div> <!-- end of col -->
+          <% end%>
+        <% end %>
+    </div>
 
-<%= render 'shared/search_button' %>
 
 <div class="container blue-background">
 <%= render 'shared/colour-filter' %>
@@ -27,9 +39,24 @@
  </div>
 </div> <!-- end of row -->
 </div> <!-- end of container -->
+  <% if @kebab_search %>
+     <% @kebab_search.map(&:name).join(" - ")  %>
+  <% end %>
+  <div class="row justify-content-center">
+    <%= render 'shared/search_button' %>
+  </div>
+    <br>
+    <div id="map" style="width: 100%; height: 390px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+      <%= link_to featured_path, id: "back-icon" do %>
+  <i class="fas fa-arrow-left"></i><% end %>
 
+  <div>
+    <%=  render 'shared/footer' %>
+    <%= javascript_pack_tag "get-user-location" %>
 
-<%=  render 'shared/footer' %>
-
-<%= javascript_pack_tag "get-user-location" %>
-
+  </div>
+</div>
+</div>

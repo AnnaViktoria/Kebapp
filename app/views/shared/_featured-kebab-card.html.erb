@@ -1,0 +1,25 @@
+<%= link_to kebab_shop_path(kebab) do %>
+<div class="box-wrapper mt-3">
+
+  <span class="price"><%= kebab.price.round(0) %> kr</span>
+  <div class="desc">Closing at: <%= kebab.schedules.first.closing_hour %>:00</div>
+  <%= cl_image_tag kebab.photo, class: "kebabphoto" %>
+  <div class="box-content d-flex flex-row justify-content-center">
+    <div class="title"><%= kebab.name %></div>
+      <div class="anna-rating d-flex justify-content-center">
+    <% (1..5).each do |value|%>
+      <% if value <= kebab.rating %>
+        <i class="fas fa-star"></i>
+      <% else %>
+        <i class="fa fa-star-o"></i>
+      <% end %>
+    <% end %>
+<!-- <i class="fas fa-star-half-alt"></i> -->
+  </div>
+    <div class="distance"> <%= (Geocoder::Calculations.distance_between([kebab.latitude, kebab.longitude], [55.6915195,12.5574414]) * 1609.34).round(0)  %>m away </div>
+    <%= link_to "https://www.google.com/maps?saddr=My+Location&daddr=#{kebab.address}", id: "google-directions" do %>
+  <i class="fas fa-directions"></i>
+<% end %>
+  </div>
+</div>
+<% end  %>

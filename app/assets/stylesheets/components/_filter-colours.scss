@@ -29,22 +29,88 @@ input#tab3, input#tab2, input#tab1 {
   display: none;
 }
 
-label#label3, label#label2, label#label1 {
-  border: 3px solid white;
-  border-radius: 10px;
-  width: 130px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  cursor: pointer;
-  transition: 0.3s;
-  text-decoration: none;
-}
 
 a {
   text-decoration: none;
 }
 
 
+
+.filter-container{
+   position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background: #F1D302;
+  z-index: -5;
+}
+
+
+.all-filter {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 1.0em;
+    padding: 7px 10px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+    border: 5px solid transparent;
+    border-bottom-color: rgba(0,0,0,0.35);
+    background: hsla(260, 100%, 50%, 1);
+    cursor: pointer;
+    outline: 0 !important;
+}
+
+a{
+  color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.distance-click{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  width: 120px;
+  border-radius: 10px;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  margin: 5px;
+  background-color: #6610F2;
+  box-shadow: 5px 10px 18px black;
+  border: 5px solid #6610F2;
+}
+
+.price-click{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  width: 130px;
+  border-radius: 10px;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  margin: 5px;
+  background-color: #6610F2;
+  box-shadow: 5px 10px 18px black;
+  border: 5px solid #6610F2;
+}
+
+.rating-click{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 2px 10px;
+  width: 120px;
+  border-radius: 10px;
+  text-shadow: -1px -1px 1px rgba(0,0,0,0.8);
+  margin: 5px;
+  background-color: #6610F2;
+  box-shadow: 5px 10px 18px black;
+  border: 5px solid #6610F2;
+}

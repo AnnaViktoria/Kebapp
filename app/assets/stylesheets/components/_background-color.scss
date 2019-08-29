@@ -2,3 +2,8 @@ body {
   background-color: #eae9e9;
 }
 
+.background-featured {
+background: #FF5F6D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
