@@ -62,6 +62,7 @@ a {
     background: hsla(260, 100%, 50%, 1);
     cursor: pointer;
     outline: 0 !important;
+    text-align: text;
 }
 
 a{
@@ -85,6 +86,7 @@ a:hover {
   background-color: #6610F2;
   box-shadow: 5px 10px 18px black;
   border: 5px solid #6610F2;
+  text-align: center;
 }
 
 .price-click{
@@ -99,6 +101,7 @@ a:hover {
   background-color: #6610F2;
   box-shadow: 5px 10px 18px black;
   border: 5px solid #6610F2;
+  text-align: center;
 }
 
 .rating-click{
@@ -113,4 +116,5 @@ a:hover {
   background-color: #6610F2;
   box-shadow: 5px 10px 18px black;
   border: 5px solid #6610F2;
+  text-align: center;
 }

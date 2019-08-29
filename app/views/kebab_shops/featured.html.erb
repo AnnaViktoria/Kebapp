@@ -4,15 +4,15 @@
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center">
       <% if !@near_kebab.empty?%>
-        <h2 class="title text-center mt-3">Closest</h2>
+        <h2 class="title-closest text-center mt-3"><i class="fas fa-map-marked-alt"></i></h2>
         <%= render 'shared/featured-kebab-card', kebab: @near_kebab.first %>
       <% end %>
       <% if @cheapest_kebab %>
-        <h2 class="title text-center mt-3">Cheapest</h2>
+        <h2 class="title-cheapest text-center mt-3"><i class="fas fa-coins"></i></h2>
         <%= render 'shared/featured-kebab-card', kebab: @cheapest_kebab %>
       <% end %>
       <% if @review_kebab %>
-        <h2 class="title text-center mt-3">Top Rated</h2>
+        <h2 class="title-popular text-center mt-3"><i class="fas fa-thumbs-up"></i></h2>
         <%= render 'shared/featured-kebab-card', kebab: @review_kebab %>
       <% end %>
     </div>
@@ -23,3 +23,5 @@
 
 <%=  render 'shared/footer' %>
 </div>
+
+

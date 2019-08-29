@@ -5,7 +5,7 @@ Review.destroy_all
 Schedule.destroy_all
 
 puts "Creating Kebab Shop 1"
-kebab_shop = KebabShop.new(name: "Durum Bar", address: 'Nørregade 53, 1165, København', rating: 0, price: 60)
+kebab_shop = KebabShop.new(name: "Durum Bar", address: 'Nørregade 53, 1165, København', rating: 0, price: 43)
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566290368/Screenshot_2019-08-20_at_10.39.02_gdb9q6.png"
 kebab_shop.save!
 
@@ -18,14 +18,12 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 24 ).save!
 
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
-
-
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 1 created!"
 
 puts "Creating Kebab Shop 2"
-kebab_shop = KebabShop.new(name: "Strøgshawarma", address: 'Frederiksberggade 5, 1459, København', rating: 5, price: 62)
+kebab_shop = KebabShop.new(name: "Strøgshawarma", address: 'Frederiksberggade 5, 1459, København', rating: 5, price: 68)
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566290529/Screenshot_2019-08-20_at_10.41.51_byflaw.png"
 kebab_shop.save!
 
@@ -37,6 +35,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
 
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 2 created!"
 
 puts "Creating Kebab Shop 3"
@@ -52,8 +52,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 6 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 1 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 54 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 42 ).save!
 puts "Kebab Shop 3 created!"
 
 puts "Creating Kebab Shop 4"
@@ -69,12 +69,12 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 4 created!"
 
 puts "Creating Kebab Shop 5"
-kebab_shop = KebabShop.new(name: "Take & Eat I/S", address: 'Nørrebrogade 30, 2200, København', rating: 0, price: 66)
+kebab_shop = KebabShop.new(name: "Take & Eat I/S", address: 'Nørrebrogade 30, 2200, København', rating: 0, price: 50)
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566291518/Screenshot_2019-08-20_at_10.58.26_nrccq4.png"
 kebab_shop.save!
 
@@ -87,12 +87,12 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 22 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 5 created!"
 
 puts "Creating Kebab Shop 6"
-kebab_shop = KebabShop.new(name: "KEBABEN", address: 'Gothersgade 32, 1123, København', rating: 0, price: 68)
+kebab_shop = KebabShop.new(name: "KEBABEN", address: 'Gothersgade 32, 1123, København', rating: 0, price: 59)
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566291741/Screenshot_2019-08-20_at_11.02.08_czpq1n.png"
 kebab_shop.save!
 
@@ -104,14 +104,14 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 7 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 22 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 6 created!"
 
 
 puts "Creating Kebab Shop 8"
 
-kebab_shop = KebabShop.new(name: "Kebap Palace", address: 'Frederiksberggade 30, 1459, København', rating: 0, price: 72)
+kebab_shop = KebabShop.new(name: "Kebap Palace", address: 'Frederiksberggade 30, 1459, København', rating: 0, price: 49)
 
 kebab_shop.remote_photo_url = "https://res.cloudinary.com/dtxjlqqqo/image/upload/v1566292851/Screenshot_2019-08-20_at_11.20.31_vx2srz.png"
 kebab_shop.save!
@@ -124,8 +124,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 8 created!"
 
 puts "Creating Kebab Shop 9"
@@ -141,8 +141,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12,  closing_hour: 22 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 22 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 9 created!"
 
 puts "Creating Kebab Shop 10"
@@ -158,8 +158,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 6 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 24 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 10 created!"
 
 puts "Creating Kebab Shop 11"
@@ -175,8 +175,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 7 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 5 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 11 created!"
 
 puts "Creating Kebab Shop 12"
@@ -192,8 +192,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 22  ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 22 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 12 created!"
 
 puts "Creating Kebab Shop 13"
@@ -209,8 +209,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 12,  closing_hour: 24 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 24 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 13 created!"
 
 puts "Creating Kebab Shop 14"
@@ -226,8 +226,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 24 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 11,  closing_hour: 22 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 14 created!"
 
 puts "Creating Kebab Shop 15"
@@ -243,8 +243,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 10,  closing_hour: 5 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 10,  closing_hour: 3 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 15 created!"
 
 puts "Creating Kebab Shop 16"
@@ -260,8 +260,8 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 23 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 23 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 16 created!"
 
 puts "Creating Kebab Shop 17"
@@ -277,6 +277,6 @@ Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "friday",    opening_hour: 1
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "saturday",  opening_hour: 11,  closing_hour: 24 ).save!
 Schedule.new(kebab_shop_id: kebab_shop.id, weekday: "sunday",    opening_hour: 12,  closing_hour: 24 ).save!
 
-Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 150 ).save!
-Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 100 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "XL Durum",    description: "Our famous durum menu with extra cheddar and extra beef served with white sauce",  price: 64 ).save!
+Menu.new(kebab_shop_id: kebab_shop.id, title: "Classic kebab",    description: "The old school kebab made with fresh bread and tomatoes, garlic, chicken and ketchup",  price: 54 ).save!
 puts "Kebab Shop 17 created!"
