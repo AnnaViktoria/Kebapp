@@ -2,6 +2,12 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @kebab_shop = KebabShop.find(params[:kebab_shop_id])
+    day_today = Date.today.strftime("%A").downcase!
+    @week_day = @kebab_shop.schedules.find_by(weekday: day_today)
+
+
+    @day_today = Date.today.strftime("%A").downcase!
+
     @review.kebab_shop = @kebab_shop
     if @review.save
       all_ratings = @kebab_shop.reviews.map(&:rating)
@@ -9,7 +15,8 @@ class ReviewsController < ApplicationController
       @kebab_shop.save!
       redirect_to kebab_shops_path
     else
-      render :new
+      flash.now[:alert]
+      render "kebab_shops/show"
     end
   end
 

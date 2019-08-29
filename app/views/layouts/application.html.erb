@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>Kebapp</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
+
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%= favicon_link_tag asset_path "icons/apple-touch-icon-120x120-precomposed.png" %>
+    <%= favicon_link_tag asset_path "icons/apple-touch-icon.png" %>
+    <%= favicon_link_tag asset_path "icons/apple-touch-icon-120x120.png" %>
+    <%= favicon_link_tag 'icons/favicon.ico' %>
+
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
   </head>
   <body>
     <%= yield %>
@@ -15,3 +29,4 @@
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+
