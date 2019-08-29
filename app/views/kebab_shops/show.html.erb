@@ -11,7 +11,7 @@
       <h2 class="kebab-font text-center"><%= @kebab_shop.name %> </h2>
        <div class="showpage-distance"> only <%= (Geocoder::Calculations.distance_between([@kebab_shop.latitude, @kebab_shop.longitude], [55.6915195,12.5574414]) * 1609.34).round(0)  %>m away!</div>
       <div class="directions-button-container">
-      <%= link_to "https://www.google.com/maps?saddr=My+Location&daddr=#{@kebab_shop.address}", id: "directions-button-container" do %>
+      <%= link_to "https://www.google.com/maps?saddr=Ahornsgade+15,+2200+København&daddr=#{@kebab_shop.address}", id: "directions-button-container" do %>
         <h4 class="directions-button">Take me there</h4>
   <% end %></div>
       <div class="height-width" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @kebab_shop.photo, crop: :fill %>)"><h4 class="texty">Closing at: <%= @week_day.closing_hour %>:00</h4>
