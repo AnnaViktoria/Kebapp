@@ -1,9 +1,19 @@
+.showpage-distance {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  font-weight: 30px;
+  font-family: 'Acme', sans-serif;
+  font-size: 18px;
+}
+
 .menu-container{
   border: 5px solid #f2f2f2;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
   background-color: white;
+  width: 90vw;
 }
 
 .menu-title-button {
