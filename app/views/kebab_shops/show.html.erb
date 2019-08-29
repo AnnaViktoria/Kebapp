@@ -8,10 +8,10 @@
   <div class="row">
     <div class="col-12">
       <br>
-      <h2 class="kebab-font mt-3 text-center"><%= @kebab_shop.name %> </h2>
-      <%= link_to "https://www.google.com/maps?saddr=My+Location&daddr=#{@kebab_shop.address}", id: "google-directions" do %>
-  <i class="fas fa-directions"></i>
-  <% end %>
+      <h2 class="kebab-font mt-3 text-center"><%= @kebab_shop.name %> </h2><div class="directions-button-container">
+      <%= link_to "https://www.google.com/maps?saddr=My+Location&daddr=#{@kebab_shop.address}", id: "directions-button-container" do %>
+        <h4 class="directions-button">Take me there!</h4>
+  <% end %></div>
       <h4 class="text-center font-style closing-time">Closes at: <%= @week_day.closing_hour %>:00 </h4>
       <div class="height-width" style="background-image: linear-gradient(rgba(251,117,37,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @kebab_shop.photo, crop: :fill %>)">
       </div>
@@ -27,5 +27,5 @@
 </div>
       <%= link_to kebab_shops_path, id: "back-icon" do %>
   <i class="fas fa-arrow-left mt-3" ></i><% end %>
-<%=  render 'shared/footer' %>
 </div>
+<%=  render 'shared/footer' %>
