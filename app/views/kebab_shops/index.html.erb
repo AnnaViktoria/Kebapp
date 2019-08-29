@@ -20,25 +20,6 @@
         <% end %>
     </div>
 
-
-<div class="container blue-background">
-<%= render 'shared/colour-filter' %>
-  <div class="row" id="kebab-row">
-      <% if !@kebab_search.empty? %>
-          <% @kebab_search.each do |kebab| %>
-              <div class="col-12 col-lg-6">
-               <%= render 'shared/kebab-card', kebab: kebab %>
-              </div> <!-- end of col -->
-            <% end%>
-           <% else %>
-        <%= render "shared/kebab-card-list", kebab_shops: @kebab_shops %>
-      <% end %>
-    <div id="map" style="width: 390px; height: 390px;"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
- </div>
-</div> <!-- end of row -->
-</div> <!-- end of container -->
   <% if @kebab_search %>
      <% @kebab_search.map(&:name).join(" - ")  %>
   <% end %>
