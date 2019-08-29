@@ -3,17 +3,18 @@
   <div class="row justify-content-center">
     <input type="radio" name="tabs" id="tab1" />
       <label for="tab1" id="label1">
-        <div class= "see-all-kebabs-button mt-3 col-s"> <%= link_to "Closest", filter_path(filter: :distance), remote: true, id: "filter-id-button-closest",class: "filter-all-kebabs" %></div>
+        <div class= "see-all-kebabs-button mt-3 col-s"> <%= link_to  filter_path(filter: :distance), remote: true, id: "filter-id-button-closest",class: "text-center filter-all-kebabs" do %><i class="fas fa-map-marked-alt"></i> <% end %> </div>
       </label>
 
     <input type="radio" name="tabs" id="tab2" />
       <label for="tab2" id="label2">
-        <div class= "see-all-kebabs-button mt-3 col-s"> <%= link_to "Cheapest", filter_path(filter: :price), remote: true, id: "filter-id-button-price", class: "filter-all-kebabs" %></div>
+        <div class= "see-all-kebabs-button mt-3 col-s"> <%= link_to  filter_path(filter: :price), remote: true, id: "filter-id-button-price", class: "text-center filter-all-kebabs" do %> <i class="fas fa-coins"></i><% end %> </div>
       </label>
 
     <input type="radio" name="tabs" id="tab3"/>
       <label for="tab3" id="label3">
-        <div class= "see-all-kebabs-button mt-3 col-s">   <%= link_to "Popular", filter_path(filter: :rating), remote: true, id: "filter-id-button-rating", class: "filter-all-kebabs" %></div>
+        <div class= "see-all-kebabs-button mt-3 col-s">   <%= link_to  filter_path(filter: :rating), remote: true, id: "filter-id-button-rating", class: "text-center filter-all-kebabs" do %> <i class="fas fa-thumbs-up"></i><% end %> </div>
       </label>
   </div>
 </div>
+
