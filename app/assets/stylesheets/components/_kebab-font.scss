@@ -1,6 +1,5 @@
 .kebab-font {
   font-family: 'Acme', sans-serif;
-  text-shadow: 1.5px 1.5px gray;
 }
 
 .height-width {
@@ -10,5 +9,10 @@ background-position: center;
 background-size: cover;
 margin: 0 auto;
 border-radius: 10px;
+  .closing-time {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+  }
 }
 
