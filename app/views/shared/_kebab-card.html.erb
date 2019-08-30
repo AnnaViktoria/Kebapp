@@ -3,7 +3,7 @@
 <%= link_to kebab_shop_path(kebab) do %>
 <div class="box-wrapper mt-3 hvr-bounce-out">
   <span class="price"><%= kebab.price.round(0) %> kr</span>
-  <div class="desc"> Closing at: <%= week_day.closing_hour %>:00 </div>
+  <div class="desc"> Closing at <%= "%02d" %  week_day.closing_hour %>:00 </div>
   <%= cl_image_tag kebab.photo, class: "kebabphoto" %>
   <div class="box-content d-flex flex-row justify-content-center">
     <div class="title"><%= kebab.name %></div>
